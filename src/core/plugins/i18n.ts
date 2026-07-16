@@ -3,7 +3,7 @@ import { createI18n } from 'vue-i18n';
 
 const messages = Object.fromEntries(
     Object
-        .entries(import.meta.glob('../locales/*.{y(a)?ml,json}', { eager: true }))
+        .entries(import.meta.glob('../locales/*.{yaml,yml,json}', { eager: true }))
         .map(([key, value]: any) => {
             const name = key.substring(key.lastIndexOf('/') + 1).replace(/\.[^/.]+$/, '');
             return [name, value.default];
