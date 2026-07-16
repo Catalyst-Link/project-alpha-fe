@@ -3,6 +3,7 @@ import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import fg from 'fast-glob';
 import AutoImport from 'unplugin-auto-import/vite';
+import Icon from 'unplugin-icons/vite';
 import Components from 'unplugin-vue-components/vite';
 import { defineConfig, loadEnv } from 'vite';
 import VueDevTools from 'vite-plugin-vue-devtools';
@@ -95,16 +96,31 @@ export default defineConfig(({ mode }) => {
 
             // https://github.com/unplugin/unplugin-vue-components
             Components({
+                dts: 'src/component.map.d.ts',
                 extensions: ['vue'],
                 include: [
                     /\.vue$/,
                     /\.vue\?vue/,
                 ],
-                dts: 'src/component.map.d.ts',
                 dirs: [
                     'src/core/components',
                     'src/modules/**/components',
                 ],
+                resolvers: [
+                    (componentName) => {
+                        if (componentName === 'Icon') {
+                            return {
+                                name: 'Icon',
+                                from: '@iconify/vue',
+                            };
+                        }
+                    },
+                ],
+            }),
+
+            // https://github.com/unplugin/unplugin-icons
+            Icon({
+                autoInstall: true,
             }),
         ],
 
