@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import { router } from './router';
+import { registerPlugins } from './core/plugins';
 import '@core/styles/index.css';
 
 const app = createApp(App);
 
-app
-    .use(router)
-    .mount('#app');
+registerPlugins(app);
+
+app.mount('#app');

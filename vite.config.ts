@@ -1,4 +1,5 @@
 import path from 'node:path';
+import VueI18n from '@intlify/unplugin-vue-i18n/vite';
 import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import fg from 'fast-glob';
@@ -121,6 +122,14 @@ export default defineConfig(({ mode }) => {
             // https://github.com/unplugin/unplugin-icons
             Icon({
                 autoInstall: true,
+            }),
+
+            // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
+            VueI18n({
+                runtimeOnly: true,
+                compositionOnly: true,
+                fullInstall: true,
+                include: [path.resolve(__dirname, './src/core/locales/**')],
             }),
         ],
 
