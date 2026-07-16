@@ -35,6 +35,7 @@ declare global {
   const closestIndexTo: typeof import('date-fns').closestIndexTo
   const closestTo: typeof import('date-fns').closestTo
   const clsx: typeof import('clsx').clsx
+  const cn: typeof import('./core/utils/ClassUtil').cn
   const compareAsc: typeof import('date-fns').compareAsc
   const compareDesc: typeof import('date-fns').compareDesc
   const computed: typeof import('vue').computed
@@ -44,6 +45,7 @@ declare global {
   const computedWithControl: typeof import('@vueuse/core').computedWithControl
   const configure: typeof import('vee-validate').configure
   const constants: typeof import('date-fns').constants
+  const containsOnlyNumbers: typeof import('./core/utils/HelperUtil').containsOnlyNumbers
   const controlledComputed: typeof import('@vueuse/core').controlledComputed
   const controlledRef: typeof import('@vueuse/core').controlledRef
   const createApp: typeof import('vue').createApp
@@ -51,6 +53,7 @@ declare global {
   const createEventHook: typeof import('@vueuse/core').createEventHook
   const createGlobalState: typeof import('@vueuse/core').createGlobalState
   const createInjectionState: typeof import('@vueuse/core').createInjectionState
+  const createObjectURL: typeof import('./core/utils/HelperUtil').createObjectURL
   const createPinia: typeof import('pinia').createPinia
   const createReactiveFn: typeof import('@vueuse/core').createReactiveFn
   const createRef: typeof import('@vueuse/core').createRef
@@ -167,6 +170,8 @@ declare global {
   const intlFormat: typeof import('date-fns').intlFormat
   const intlFormatDistance: typeof import('date-fns').intlFormatDistance
   const isAfter: typeof import('date-fns').isAfter
+  const isArray: typeof import('./core/utils/HelperUtil').isArray
+  const isArrayExist: typeof import('./core/utils/HelperUtil').isArrayExist
   const isBefore: typeof import('date-fns').isBefore
   const isDate: typeof import('date-fns').isDate
   const isDefined: typeof import('@vueuse/core').isDefined
@@ -179,6 +184,10 @@ declare global {
   const isLeapYear: typeof import('date-fns').isLeapYear
   const isMatch: typeof import('date-fns').isMatch
   const isMonday: typeof import('date-fns').isMonday
+  const isNil: typeof import('./core/utils/HelperUtil').isNil
+  const isNull: typeof import('./core/utils/HelperUtil').isNull
+  const isNumber: typeof import('./core/utils/HelperUtil').isNumber
+  const isNumeric: typeof import('./core/utils/HelperUtil').isNumeric
   const isPast: typeof import('date-fns').isPast
   const isProxy: typeof import('vue').isProxy
   const isReactive: typeof import('vue').isReactive
@@ -209,6 +218,7 @@ declare global {
   const isToday: typeof import('date-fns').isToday
   const isTomorrow: typeof import('date-fns').isTomorrow
   const isTuesday: typeof import('date-fns').isTuesday
+  const isUndefined: typeof import('./core/utils/HelperUtil').isUndefined
   const isValid: typeof import('date-fns').isValid
   const isWednesday: typeof import('date-fns').isWednesday
   const isWeekend: typeof import('date-fns').isWeekend
@@ -251,6 +261,8 @@ declare global {
   const nextTuesday: typeof import('date-fns').nextTuesday
   const nextWednesday: typeof import('date-fns').nextWednesday
   const number: typeof import('yup').number
+  const numberOrNull: typeof import('./core/utils/HelperUtil').numberOrNull
+  const numberOrZero: typeof import('./core/utils/HelperUtil').numberOrZero
   const object: typeof import('yup').object
   const onActivated: typeof import('vue').onActivated
   const onBeforeMount: typeof import('vue').onBeforeMount
@@ -348,6 +360,8 @@ declare global {
   const startOfYesterday: typeof import('date-fns').startOfYesterday
   const storeToRefs: typeof import('pinia').storeToRefs
   const string: typeof import('yup').string
+  const stringOrEmpty: typeof import('./core/utils/HelperUtil').stringOrEmpty
+  const stringOrNull: typeof import('./core/utils/HelperUtil').stringOrNull
   const sub: typeof import('date-fns').sub
   const subBusinessDays: typeof import('date-fns').subBusinessDays
   const subDays: typeof import('date-fns').subDays
@@ -583,6 +597,8 @@ declare global {
   const useWindowScroll: typeof import('@vueuse/core').useWindowScroll
   const useWindowSize: typeof import('@vueuse/core').useWindowSize
   const validate: typeof import('vee-validate').validate
+  const valueOrNull: typeof import('./core/utils/HelperUtil').valueOrNull
+  const valueOrStrip: typeof import('./core/utils/HelperUtil').valueOrStrip
   const watch: typeof import('vue').watch
   const watchArray: typeof import('@vueuse/core').watchArray
   const watchAtMost: typeof import('@vueuse/core').watchAtMost
@@ -649,6 +665,7 @@ declare module 'vue' {
     readonly closestIndexTo: UnwrapRef<typeof import('date-fns')['closestIndexTo']>
     readonly closestTo: UnwrapRef<typeof import('date-fns')['closestTo']>
     readonly clsx: UnwrapRef<typeof import('clsx')['clsx']>
+    readonly cn: UnwrapRef<typeof import('./core/utils/ClassUtil')['cn']>
     readonly compareAsc: UnwrapRef<typeof import('date-fns')['compareAsc']>
     readonly compareDesc: UnwrapRef<typeof import('date-fns')['compareDesc']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -658,6 +675,7 @@ declare module 'vue' {
     readonly computedWithControl: UnwrapRef<typeof import('@vueuse/core')['computedWithControl']>
     readonly configure: UnwrapRef<typeof import('vee-validate')['configure']>
     readonly constants: UnwrapRef<typeof import('date-fns')['constants']>
+    readonly containsOnlyNumbers: UnwrapRef<typeof import('./core/utils/HelperUtil')['containsOnlyNumbers']>
     readonly controlledComputed: UnwrapRef<typeof import('@vueuse/core')['controlledComputed']>
     readonly controlledRef: UnwrapRef<typeof import('@vueuse/core')['controlledRef']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
@@ -665,6 +683,7 @@ declare module 'vue' {
     readonly createEventHook: UnwrapRef<typeof import('@vueuse/core')['createEventHook']>
     readonly createGlobalState: UnwrapRef<typeof import('@vueuse/core')['createGlobalState']>
     readonly createInjectionState: UnwrapRef<typeof import('@vueuse/core')['createInjectionState']>
+    readonly createObjectURL: UnwrapRef<typeof import('./core/utils/HelperUtil')['createObjectURL']>
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
     readonly createReactiveFn: UnwrapRef<typeof import('@vueuse/core')['createReactiveFn']>
     readonly createRef: UnwrapRef<typeof import('@vueuse/core')['createRef']>
@@ -781,6 +800,8 @@ declare module 'vue' {
     readonly intlFormat: UnwrapRef<typeof import('date-fns')['intlFormat']>
     readonly intlFormatDistance: UnwrapRef<typeof import('date-fns')['intlFormatDistance']>
     readonly isAfter: UnwrapRef<typeof import('date-fns')['isAfter']>
+    readonly isArray: UnwrapRef<typeof import('./core/utils/HelperUtil')['isArray']>
+    readonly isArrayExist: UnwrapRef<typeof import('./core/utils/HelperUtil')['isArrayExist']>
     readonly isBefore: UnwrapRef<typeof import('date-fns')['isBefore']>
     readonly isDate: UnwrapRef<typeof import('date-fns')['isDate']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
@@ -793,6 +814,10 @@ declare module 'vue' {
     readonly isLeapYear: UnwrapRef<typeof import('date-fns')['isLeapYear']>
     readonly isMatch: UnwrapRef<typeof import('date-fns')['isMatch']>
     readonly isMonday: UnwrapRef<typeof import('date-fns')['isMonday']>
+    readonly isNil: UnwrapRef<typeof import('./core/utils/HelperUtil')['isNil']>
+    readonly isNull: UnwrapRef<typeof import('./core/utils/HelperUtil')['isNull']>
+    readonly isNumber: UnwrapRef<typeof import('./core/utils/HelperUtil')['isNumber']>
+    readonly isNumeric: UnwrapRef<typeof import('./core/utils/HelperUtil')['isNumeric']>
     readonly isPast: UnwrapRef<typeof import('date-fns')['isPast']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
@@ -823,6 +848,7 @@ declare module 'vue' {
     readonly isToday: UnwrapRef<typeof import('date-fns')['isToday']>
     readonly isTomorrow: UnwrapRef<typeof import('date-fns')['isTomorrow']>
     readonly isTuesday: UnwrapRef<typeof import('date-fns')['isTuesday']>
+    readonly isUndefined: UnwrapRef<typeof import('./core/utils/HelperUtil')['isUndefined']>
     readonly isValid: UnwrapRef<typeof import('date-fns')['isValid']>
     readonly isWednesday: UnwrapRef<typeof import('date-fns')['isWednesday']>
     readonly isWeekend: UnwrapRef<typeof import('date-fns')['isWeekend']>
@@ -865,6 +891,8 @@ declare module 'vue' {
     readonly nextTuesday: UnwrapRef<typeof import('date-fns')['nextTuesday']>
     readonly nextWednesday: UnwrapRef<typeof import('date-fns')['nextWednesday']>
     readonly number: UnwrapRef<typeof import('yup')['number']>
+    readonly numberOrNull: UnwrapRef<typeof import('./core/utils/HelperUtil')['numberOrNull']>
+    readonly numberOrZero: UnwrapRef<typeof import('./core/utils/HelperUtil')['numberOrZero']>
     readonly object: UnwrapRef<typeof import('yup')['object']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
@@ -962,6 +990,8 @@ declare module 'vue' {
     readonly startOfYesterday: UnwrapRef<typeof import('date-fns')['startOfYesterday']>
     readonly storeToRefs: UnwrapRef<typeof import('pinia')['storeToRefs']>
     readonly string: UnwrapRef<typeof import('yup')['string']>
+    readonly stringOrEmpty: UnwrapRef<typeof import('./core/utils/HelperUtil')['stringOrEmpty']>
+    readonly stringOrNull: UnwrapRef<typeof import('./core/utils/HelperUtil')['stringOrNull']>
     readonly sub: UnwrapRef<typeof import('date-fns')['sub']>
     readonly subBusinessDays: UnwrapRef<typeof import('date-fns')['subBusinessDays']>
     readonly subDays: UnwrapRef<typeof import('date-fns')['subDays']>
@@ -1197,6 +1227,8 @@ declare module 'vue' {
     readonly useWindowScroll: UnwrapRef<typeof import('@vueuse/core')['useWindowScroll']>
     readonly useWindowSize: UnwrapRef<typeof import('@vueuse/core')['useWindowSize']>
     readonly validate: UnwrapRef<typeof import('vee-validate')['validate']>
+    readonly valueOrNull: UnwrapRef<typeof import('./core/utils/HelperUtil')['valueOrNull']>
+    readonly valueOrStrip: UnwrapRef<typeof import('./core/utils/HelperUtil')['valueOrStrip']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchArray: UnwrapRef<typeof import('@vueuse/core')['watchArray']>
     readonly watchAtMost: UnwrapRef<typeof import('@vueuse/core')['watchAtMost']>
