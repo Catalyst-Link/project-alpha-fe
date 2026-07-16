@@ -319,6 +319,7 @@ declare global {
   const refManualReset: typeof import('@vueuse/core').refManualReset
   const refThrottled: typeof import('@vueuse/core').refThrottled
   const refWithControl: typeof import('@vueuse/core').refWithControl
+  const registerLayouts: typeof import('./core/utils/HelperUtil').registerLayouts
   const resolveComponent: typeof import('vue').resolveComponent
   const roundToNearestMinutes: typeof import('date-fns').roundToNearestMinutes
   const secondsToHours: typeof import('date-fns').secondsToHours

@@ -14,5 +14,8 @@ declare module 'vue' {
     Icon: typeof import('@iconify/vue')['Icon']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VLayout: typeof import('./core/components/layouts/VLayout.vue')['default']
+    VLayoutBlank: typeof import('./core/components/layouts/VLayoutBlank.vue')['default']
+    VLayoutDefault: typeof import('./core/components/layouts/VLayoutDefault.vue')['default']
   }
 }

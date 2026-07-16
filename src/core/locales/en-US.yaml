@@ -481,6 +481,7 @@ common:
     zip-code: Zip Code
 menu: {}
 message:
+    404: '404'
     added-text: >-
         No {text} added | 1 {text} has been added | {count}
         {text} have been added
@@ -497,6 +498,7 @@ message:
         Are you sure you want to cancel this data? This action cannot be
         undone.
     confirmation-cancel-text: Are you sure you want to cancel {text}?
+    cant-find-page: Sorry, we can't find that page. You'll find lots to explore on the home page
     data-not-found: Data not found
     delete-confirmation: Delete Data Confirmation
     delete-message: >-
@@ -559,6 +561,7 @@ message:
         Your session has expired. Please log in again to access the application.
     start-creating-data: Start by creating new data
     submission-cost-above-withdrawal-estimate: Submission cost is above the estimated withdrawal cost
+    something-missing: Something's missing
     table:
         added-text: ''
         back-to-home: ''
