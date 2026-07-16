@@ -116,6 +116,7 @@ declare global {
   const endOfWeek: typeof import('date-fns').endOfWeek
   const endOfYear: typeof import('date-fns').endOfYear
   const endOfYesterday: typeof import('date-fns').endOfYesterday
+  const env: typeof import('./core/utils/EnvironmentUtil').env
   const extendRef: typeof import('@vueuse/core').extendRef
   const format: typeof import('date-fns').format
   const formatDistance: typeof import('date-fns').formatDistance
@@ -746,6 +747,7 @@ declare module 'vue' {
     readonly endOfWeek: UnwrapRef<typeof import('date-fns')['endOfWeek']>
     readonly endOfYear: UnwrapRef<typeof import('date-fns')['endOfYear']>
     readonly endOfYesterday: UnwrapRef<typeof import('date-fns')['endOfYesterday']>
+    readonly env: UnwrapRef<typeof import('./core/utils/EnvironmentUtil')['env']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly format: UnwrapRef<typeof import('date-fns')['format']>
     readonly formatDistance: UnwrapRef<typeof import('date-fns')['formatDistance']>
