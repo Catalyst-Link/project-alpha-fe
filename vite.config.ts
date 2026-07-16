@@ -8,6 +8,7 @@ import Icon from 'unplugin-icons/vite';
 import Components from 'unplugin-vue-components/vite';
 import { defineConfig, loadEnv } from 'vite';
 import VueDevTools from 'vite-plugin-vue-devtools';
+import { ViteWebfontDownload } from 'vite-plugin-webfont-dl';
 import { VueRouterAutoImports } from 'vue-router/unplugin';
 import VueRouter from 'vue-router/vite';
 
@@ -131,6 +132,13 @@ export default defineConfig(({ mode }) => {
                 fullInstall: true,
                 include: [path.resolve(__dirname, './src/core/locales/**')],
             }),
+
+            // https://github.com/feat-agency/vite-plugin-webfont-dl
+            ViteWebfontDownload([
+                'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+                'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap',
+                'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap',
+            ]),
         ],
 
         resolve: {
