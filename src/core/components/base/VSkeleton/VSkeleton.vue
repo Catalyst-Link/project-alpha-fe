@@ -1,0 +1,16 @@
+<script setup lang="ts">
+import type { HTMLAttributes } from 'vue';
+
+export type Props = {
+    class?: HTMLAttributes['class'];
+};
+
+const props = defineProps<Props>();
+</script>
+
+<template>
+    <div
+        data-slot="skeleton"
+        :class="cn('animate-pulse rounded-md bg-primary/10', props.class)"
+    />
+</template>

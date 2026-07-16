@@ -1,3 +1,4 @@
 <template>
     <VLayout />
+    <VToast />
 </template>

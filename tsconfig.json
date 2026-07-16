@@ -1,4 +1,11 @@
 {
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./src/*"],
+            "@core/*": ["./src/core/*"],
+            "@modules/*": ["./src/modules/*"]
+        }
+    },
     "references": [
         { "path": "./tsconfig.app.json" },
         { "path": "./tsconfig.node.json" }

@@ -113,7 +113,7 @@ export default defineConfig(({ mode }) => {
                 ],
                 resolvers: [
                     (componentName) => {
-                        if (componentName === 'Icon') {
+                        if (componentName === 'VIcon') {
                             return {
                                 name: 'Icon',
                                 from: '@iconify/vue',

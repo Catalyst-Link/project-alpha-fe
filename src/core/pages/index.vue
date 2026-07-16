@@ -10,5 +10,23 @@ pageStore.setIsLoadingTitle(false);
 </script>
 
 <template>
-    <div />
+    <VContainer class="min-h-dvh flex items-center justify-center">
+        <VEmpty>
+            <VEmptyHeader>
+                <VEmptyMedia variant="icon">
+                    <VIcon icon="lucide:folder-code" />
+                </VEmptyMedia>
+                <VEmptyTitle>No Pages Yet</VEmptyTitle>
+                <VEmptyDescription>
+                    You haven't created any pages yet. Get started by creating your first pages.
+                </VEmptyDescription>
+            </VEmptyHeader>
+            <VEmptyContent class="flex-row justify-center">
+                <VButton>Create Pages</VButton>
+                <VButton variant="secondary">
+                    Import Pages
+                </VButton>
+            </VEmptyContent>
+        </VEmpty>
+    </VContainer>
 </template>
