@@ -2,7 +2,7 @@ import path from 'node:path';
 import VueI18n from '@intlify/unplugin-vue-i18n/vite';
 import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
-import fg from 'fast-glob';
+import glob from 'fast-glob';
 import AutoImport from 'unplugin-auto-import/vite';
 import Icon from 'unplugin-icons/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
                 dts: 'src/route.map.d.ts',
                 routesFolder: [
                     'src/core/pages',
-                    ...fg.sync(
+                    ...glob.sync(
                         'src/modules/**/pages',
                         { onlyDirectories: true },
                     ),
