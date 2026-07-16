@@ -7,6 +7,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue').EffectScope
+  const Endpoint: typeof import('./core/endpoints/Endpoint').Endpoint
   const FieldContextKey: typeof import('vee-validate').FieldContextKey
   const FormContextKey: typeof import('vee-validate').FormContextKey
   const MESSAGE: typeof import('./core/constants/CommonConstant').MESSAGE
@@ -591,6 +592,7 @@ declare global {
   const useVModels: typeof import('@vueuse/core').useVModels
   const useValidateField: typeof import('vee-validate').useValidateField
   const useValidateForm: typeof import('vee-validate').useValidateForm
+  const useValidation: typeof import('./core/composables/useValidation').useValidation
   const useVibrate: typeof import('@vueuse/core').useVibrate
   const useVirtualList: typeof import('@vueuse/core').useVirtualList
   const useWakeLock: typeof import('@vueuse/core').useWakeLock
@@ -631,6 +633,9 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, ShallowRef, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
+  export type { Endpoint } from './core/endpoints/Endpoint'
+  import('./core/endpoints/Endpoint')
+  // @ts-ignore
   export type { ExtendedAxiosRequestConfig, ExtendedInternalAxiosRequestConfig, AxiosErrorResponse } from './core/types/AxiosType'
   import('./core/types/AxiosType')
   // @ts-ignore
@@ -657,6 +662,7 @@ declare module 'vue' {
   interface ComponentCustomProperties {
     readonly : UnwrapRef<typeof import('vue-router/auto')['']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly Endpoint: UnwrapRef<typeof import('./core/endpoints/Endpoint')['Endpoint']>
     readonly FieldContextKey: UnwrapRef<typeof import('vee-validate')['FieldContextKey']>
     readonly FormContextKey: UnwrapRef<typeof import('vee-validate')['FormContextKey']>
     readonly MESSAGE: UnwrapRef<typeof import('./core/constants/CommonConstant')['MESSAGE']>
@@ -1240,6 +1246,7 @@ declare module 'vue' {
     readonly useVModels: UnwrapRef<typeof import('@vueuse/core')['useVModels']>
     readonly useValidateField: UnwrapRef<typeof import('vee-validate')['useValidateField']>
     readonly useValidateForm: UnwrapRef<typeof import('vee-validate')['useValidateForm']>
+    readonly useValidation: UnwrapRef<typeof import('./core/composables/useValidation')['useValidation']>
     readonly useVibrate: UnwrapRef<typeof import('@vueuse/core')['useVibrate']>
     readonly useVirtualList: UnwrapRef<typeof import('@vueuse/core')['useVirtualList']>
     readonly useWakeLock: UnwrapRef<typeof import('@vueuse/core')['useWakeLock']>
