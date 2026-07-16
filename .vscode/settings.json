@@ -7,15 +7,18 @@
     },
 
     // i18n Ally
-    "i18n-ally.displayLanguage": "id-ID",
-    "i18n-ally.sourceLanguage": "id-ID",
+    "i18n-ally.displayLanguage": "en-US",
+    "i18n-ally.sourceLanguage": "en-US",
     "i18n-ally.keystyle": "nested",
-    "i18n-ally.localesPaths": "locales",
+    "i18n-ally.localesPaths": [
+        "src/core/locales"
+    ],
     "i18n-ally.sortKeys": true,
     "i18n-ally.pathMatcher": "{locale}.yaml",
     "i18n-ally.enabledFrameworks": ["vue"],
     "i18n-ally.tabStyle": "tab",
     "i18n-ally.indent": 4,
+    "i18n-ally.enabledParsers": ["yaml"],
 
     // Editor
     "editor.formatOnSave": true,

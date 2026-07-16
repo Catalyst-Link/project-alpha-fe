@@ -1,0 +1,642 @@
+action:
+    add: Add
+    add-text: Add {text}
+    approve: Approve
+    back: Back
+    cancel: Cancel
+    cancel-text: Cancel {text}
+    change: Change {text}
+    change-text: Change {text}
+    choose: Choose
+    choose-file: Choose File
+    choose-text: Choose {text}
+    clear: Clear
+    clear-text: Clear {text}
+    confirm: Confirm
+    create: Create
+    create-new: Create New
+    create-new-text: Create {text} New
+    create-text: Create {text}
+    download: Download
+    download-text: Download {text}
+    edit: Edit
+    edit-text: Edit {text}
+    enter-text: Enter {text}
+    export-text: Export {text}
+    find: Find
+    next: Next
+    ok: Ok
+    preview-text: See {text}
+    previous: Previous
+    print: Print
+    print-text: Print {text}
+    proceed: Proceed
+    refresh: Refresh
+    reject: Reject
+    remove: Delete
+    retry: Try Again
+    save: Save
+    search: Search
+    search-text: Search {text}
+    select-text: Choose {text}
+    start: Start
+    submit: Submit
+    submit-text: Submit {text}
+    upload-text: Upload {text}
+    view: View
+common:
+    Branch: Branch
+    absolute-write-off-date: Absolute Write-Off Date
+    access-date: Access Date
+    access-level: Access Level
+    account: Account
+    account-bank-no: Bank Account No.
+    account-name: Account Name
+    account-no: Account No.
+    account-number: Account No.
+    account-status: Account Status
+    account-text: Account {text}
+    account-type: Account Type
+    action: Action
+    action-date: Action Date
+    action-plan: Action Plan
+    active: Active
+    activity: Activity
+    address: Address
+    after: After
+    after-value: Value After
+    aging: Aging
+    aging-max: Max Aging
+    aging-min: Min Aging
+    agreement-date: Agreement Date
+    agreement-memo: Agreement Memo
+    all: All
+    amount-text: '{text} Amount'
+    angsuran: Installment
+    application: Application
+    applications: Applications
+    approval: Approval
+    approval-value: Approval Value
+    approved-amount: Approved Amount
+    apps: Apps
+    ar-total: Total A/R
+    area: Area
+    area-collector: Collector Area
+    area-id: Area ID
+    area-name: Area Name
+    area-remedial: Remedial Area
+    area-remedial-head: Remedial Head Area
+    assign: Assign
+    assign-date: Assign Date
+    assignment-letter: Assignment Letter
+    attachment: Attachment
+    auction-fee: Auction Fee
+    auction-price: Auction Price
+    authority: Authority
+    bank: Bank
+    bank-account: Bank Account
+    bank-account-form: Bank Account Form
+    bank-name: Bank Name
+    bast-no: BAST No.
+    befor-value: Value Before
+    before: Before
+    before-value: Value Before
+    billing-address: Billing Address
+    bpkb-no: BPKB No.
+    branch: Branch
+    brand: Brand
+    brand-or-type: Brand/Type
+    bunga: Interest
+    bunga-efektif: Effective Interest
+    bunga-flat: Flat Interest
+    cancel: Cancel
+    car-market-price: Car Market Price
+    car-recall-status: Car Repossession Status
+    car-recall-status-name: Car Repossession Status Name
+    case-conclusion: Case Conclusion
+    case-summary: Case Summary
+    case-type: Case Type
+    case-type-name: Case Type Name
+    changed-field: Changed Field
+    check-status: Active / Inactive
+    chronology-of-collection-handling: Collection Handling Chronology
+    clearing: Clearing
+    close-date: Close Date
+    code: Code
+    code-waive: Waive Code
+    collateral-data: Collateral Data
+    collateral-inquiry: Collateral Inquiry
+    collateral-status: Collateral Status
+    collectibility: Collectibility
+    collectibility-validation: Collectibility Validation
+    collector: Collector
+    collector-id: Collector ID
+    collector-type: Collector Type
+    conclusion: Conclusion
+    confirmation: Confirmation
+    consumer-data: Consumer Data
+    consumer-name: Consumer Name
+    contract: Contract
+    contract-account-no: Contract Account No.
+    contract-no: Contract No.
+    contract-number: Contract Number
+    coordinating-with: Coordinating With
+    coordinating-with-name: Coordinating With Name
+    credit: Credit
+    credit-settlement-process: Credit Settlement Process
+    criteria: Criteria
+    criteria-last-modified: Last Modified Date
+    criteria-name: Criteria Name
+    current: Current
+    currently: Currently
+    customer: Customer
+    customer-id: Customer ID
+    customer-name: Customer Name
+    customer-payment: Customer Payment
+    customer-restructure-description: Restructured Customer Description
+    dark: Dark
+    data: Data
+    data-change: Data Change
+    data-change-history: Data Change History
+    data-text: Data {text}
+    date: Date
+    date-text: Date {text}
+    date-type: Date Type
+    day: day
+    dealer: Dealer
+    dealer-except: Dealer Except
+    debit: Debit
+    decision: Decision
+    denda-terutang: Outstanding Penalty
+    deposit: Deposit
+    deposit-funds: Deposit Funds
+    deposito: Time Deposit
+    description: Description
+    detail: Detail
+    detail-text: Detail {text}
+    deviation: Deviation
+    deviation-authority: Deviation Authority
+    deviation-type: Deviation Type
+    disbursement-cost: Disbursement Cost
+    district: District
+    document-attachment: Document Attachment
+    due: Due
+    due-date: Due Date
+    early-termination: Early Termination
+    effective-rate: Effective Rate
+    end: End
+    estimation: Estimation
+    excess: Excess
+    excess-or-lack: Excess / Shortage
+    expedition-fee: Expedition Fee
+    expired: Expired
+    expired-date: Expired Date
+    explanation: Explanation
+    export-text: Export {text}
+    extend: Extend
+    external: External
+    failed: Failed
+    fee-detail: Fee Detail
+    field: Field
+    field-name: Field Name
+    file: File
+    file-not-valid: Invalid File
+    final-approve: Final Approve
+    fine: Penalty
+    finish-date: Finish Date
+    flat-rate: Flat Rate
+    form-text: Form {text}
+    formula: Formula
+    frequency: Frequency
+    funding: Funding
+    gl-code: GL Code
+    gl-name: GL Name
+    grand-total: Grand total
+    handling: Handling
+    handling-date: Handling Date
+    handling-fee: Handling Fee
+    handling-fee-re-submission: Handling Fee Resubmission
+    handling-fee-submission: Handling Fee Submission
+    handling-result: Handling Result
+    handling-status: Handling Status
+    history: History
+    history-text: History {text}
+    home-address-name: Home Address Name
+    id: ID
+    id-text: 'ID {text} '
+    ils-number: ILS No.
+    information-text: Information {text}
+    input-result-to-do-list: Input Result To-Do List
+    inquiry-collateral: Inquiry Collateral
+    installment: Installment
+    installment-amount: Installment Amount
+    installment-data: Installment Data
+    installment-payment: Installment Payment
+    installment-per-month: Installment/Month
+    installment-real: Real Installment
+    installment-schedule: Installment Schedule
+    insurance-claim: Insurance Claim
+    insurance-process-hanger-validation: Insurance Process Hanger Validation
+    interest: Interest
+    interest-total: Total Interest
+    internal: Internal
+    jenis: Type
+    joint-finance: Joint Finance
+    journal: Journal
+    journal-name: Journal Name
+    landing-page: Main Page
+    last-approved-amount: Previously Approved Value
+    last-payment-date: Last Payment Date
+    last-sync: Last Sync
+    last-unit-holder-name: Last Unit Holder Name
+    last-update: Last Update
+    last-updated-date: Last Modified Date
+    last-user-id: Last User ID
+    late-arrival: Late POOL Arrival
+    letter: Letter
+    level: Level
+    light: Light
+    limit: Limit
+    list: List
+    loan: Loan
+    loan-type: Loan Type
+    logout: Logout
+    loss: Loss
+    machine-learning: Machine Learning
+    machine-learning-authority: Authority by Rule (>=)
+    machine-learning-rule: Machine Learning Authority
+    main-case: Main Case
+    main-case-name: Main Case Name
+    matrix-bt-note: 'Matrix BT Note:'
+    max: Max
+    memo-collection-number: Collection Memo No.
+    memo-date: Memo Date
+    menus: Menu
+    min: Min
+    model: Model
+    modified-date: Last modified date
+    multiguna: Multipurpose
+    multiguna-validation: Multipurpose Validation
+    my-tasklist: My Tasklist
+    name: Name
+    name-waive: Waive Name
+    navigation: Navigation
+    need-approval-by: Need Approval By
+    no: No
+    no-cancel: No, cancel
+    non-active: Inactive
+    none: None
+    normal: Normal
+    normal-authority: Normal Authority (>=)
+    normal-rule: Normal Authority
+    not-active: Inactive
+    not-running: Not Running
+    note: Note
+    note-here: Note Here
+    npwp-no: NPWP No.
+    number-short: No
+    number-text: No {text}
+    occupation: Occupation
+    old-account-responsibility-after-waive: Old Account Liability After Waive
+    old-account-responsibility-before-waive: Old Account Liability Before Waive
+    os-AR: O/S AR Real
+    os-AR-Real: OS AR Real
+    os-PH-Real: OS PH Real
+    os-ar: OS A/R
+    os-ar-real: OS A/R Real
+    os-interest: OS Interest
+    os-interest-real: OS Interest Real
+    os-principal: OS Principal
+    os-principal-real: OS Principal Real
+    other-income: Other Income
+    outstanding: Outstanding
+    outstanding-awal: Initial Outstanding
+    overdue: Overdue
+    overdue-days: Overdue Days
+    overdue-installment-to: Overdue Installment No.
+    overdue-penalty: Overdue Penalty
+    overdue-when-printing-sk: Overdue when Printing SK
+    package: Package
+    paid-date: Paid Date
+    parameter-general: General Parameter
+    parameter-name: Parameter Name
+    parameter-type: Parameter Type
+    parent-account: Parent Account
+    past-due-penalty: Past Due Penalty
+    payment: Payment
+    payment-amount: Payment Amount
+    payment-date: Payment Date
+    payment-from-customer: Payment From Customer
+    payment-reference-no: Payment Reference No.
+    payment-total: Payment Amount
+    payment-type: Payment Type
+    payment-value: Payment Value
+    pending: Pending
+    period-text: Period {text}
+    ph-value: PH Value
+    pin: PIN
+    pin-account-no: Contract PIN No.
+    pin-no: PIN No.
+    piutang-pembayaran: Payment Receivables
+    pokok-hutang: Principal Debt
+    pool-entry-date: Pool Entry Date
+    pool-location: Pool Location
+    postal-code: Postal Code
+    prepayment-date: Prepayment Date
+    previous: Previous
+    previous-resubmission: Previous Resubmission
+    previously: Previously
+    principal: Principal
+    principal-os: OS Principal
+    principal-total: Total Principal
+    print-sk-date: SK Print Date
+    product: Product
+    product-name: Product Name
+    profcoll-fee: Profcoll Fee
+    profcoll-name: Profcoll Name
+    profcoll-status: Profcoll Status
+    profession-collection: Professional Collector
+    profession-collector: Professional Collector
+    professional-collector: Professional Collector
+    professional-collector-form: Professional Collector Form
+    professional-collector-handling: Professional Collector Handling
+    professional-collector-internal-handling: Internal Collector Handling
+    professional-collector-name: Professional Collector Name
+    profit: Profit
+    profit-and-loss: Profit and Loss
+    progress: Progress
+    re-submission: Resubmission
+    re-submission-reason: Resubmission Reason
+    realization-date: Realization Date
+    reason: Reason
+    recovery-date: Recovery Date
+    reference: Reference
+    reference-no: Reference No.
+    regency: Regency
+    remaining-auction: Remaining Auction
+    remaining-auction-value: Remaining Auction Value
+    remark: Remark
+    remedial: Remedial
+    remedial-area: Remedial Area
+    remedial-head: Remedial Head
+    remedial-officer: Remedial Officer
+    reprint: Reprint
+    residual-value: Residual Value
+    restructured-old-account-responsibility: Restructured Old Account Liability
+    rule: Rule
+    running: Running
+    schedule: Schedule
+    schedule-date: Schedule Date
+    scheduler-name: Scheduler Name
+    selected: Selected
+    settlement: Settlement
+    settlement-date: Settlement Date
+    settlement-simulation: Settlement Simulation
+    settlement-total: Total Settlement
+    settlement-type: Settlement Type
+    shortage: Shortage
+    signer: Signer
+    simulation: Simulation
+    sisa-bunga: Remaining Interest
+    sisa-piutang: Remaining Receivables
+    sisa-pokok-hutang: Remaining Principal Debt
+    sk-creator: SK Creator
+    sk-inactive: ' Extend SK more than 2x / Expired SK / Late SK Extension'
+    start: Start
+    state: State
+    status: Status
+    status-type: Status Type
+    stnk-process-hanger-validation: STNK Process Hanger Validation
+    submission: Submission
+    submission-cost: Cost Submission
+    submission-date: Submission Date
+    submission-fee-history: Fee Submission History
+    submission-history: Submission History
+    submission-status: Submission Status
+    summary-total: Summary Total
+    tanggal-bayar: Payment Date
+    task-list: My Tasklist
+    tax: Tax
+    tenor: Tenor
+    theme: Theme
+    third-party: Third Party
+    third-party-payment: Payment to Third Party
+    time: Time
+    titipan: Deposit
+    title: Title
+    title-name: Title Name
+    to-do-list: To-Do List
+    today: Today
+    total: Total
+    total-ar: Total A/R
+    total-interest: Total Interest
+    total-overdue: Overdue Amount
+    total-principal: Total Principal
+    total-settlement-after-waive: Total Settlement After Waive
+    total-settlement-before-waive: Total Settlement Before Waive
+    total-text: Total {text}
+    txn-date: TXNDATE
+    type: Type
+    type-of-solution: Settlement Type
+    type-text: Type {text}
+    unit-condition: Unit Condition
+    unit-condition-name: Unit Condition Name
+    unit-status-name: Unit Status Name
+    up-to: to
+    update-cancel: Update Cancel
+    update-csp: Update CSP
+    uploaded: Uploaded
+    urban-village: Urban Village
+    user: User
+    user-approve: Approving User
+    user-id: User ID
+    user-name: User Name
+    username: Username
+    validation-text: Validation {text}
+    value: Value
+    value-after-waive: Value After Waive
+    value-date: Value Date
+    value-overdue: Authority Value (>=)
+    value-pool: Value (>=)
+    vehicle: Vehicle
+    vehicle-recall-date: Vehicle Repossession Date
+    vehicle-type: Vehicle Type
+    virtual-account-no: Virtual Account No.
+    vospay: Vospay
+    vospay-validation: Vospay Validation
+    waive-in-idr: Waive (IDR)
+    waive-in-percent: Waive (%)
+    withdrawal-fee: Repossession Fee
+    withdrawn-from: Repossessed From
+    withdrawn-from-name: Repossessed From Name
+    wo-date: WO Date
+    wo-value: WO Value
+    wo-year: WO Year
+    work-address-name: Work Address Name
+    write-off: Write-Off
+    write-off-date: Write-Off Date
+    year: Year
+    yes: Yes
+    yes-sure: Yes, I am sure
+    zip-code: Zip Code
+menu: {}
+message:
+    added-text: >-
+        No {text} added | 1 {text} has been added | {count}
+        {text} have been added
+    approval-limit-less-than-payment-value: User's approval limit is less than the payment value
+    approve-confirmation: Approve Data Confirmation
+    approve-message: >-
+        Are you sure you want to approve this data? This action cannot be
+        undone.
+    back-to-home: Back to home page
+    bhjb-at-the-time-of-fee-submission: BHJB at the time of fee submission
+    bhjb-that-successfully-handles: BHJB that successfully handled
+    cancel-confirmation: Cancel Data Confirmation
+    cancel-message: >-
+        Are you sure you want to cancel this data? This action cannot be
+        undone.
+    confirmation-cancel-text: Are you sure you want to cancel {text}?
+    data-not-found: Data not found
+    delete-confirmation: Delete Data Confirmation
+    delete-message: >-
+        Are you sure you want to delete this data? This data will be permanently
+        deleted. This action cannot be undone.
+    disbursement-amount-empty-collector: Please set up the bank account for this Profcoll first
+    disbursement-amount-empty-collector-invalid: >-
+        Cannot process disbursement, the Professional Collector does not have an
+        active bank account!
+    enter-account-number-description: Enter a 10-digit bank account number
+    enter-contract-number-description: Enter a 13-digit contract number
+    enter-pin-number-description: Enter a 3-digit PIN number
+    file-cannot-be-selected: File cannot be selected!
+    file-not-uploaded-confirmation: >-
+        There are files that have not been uploaded or are currently uploading.
+        Are you sure you want to proceed with this data using only the files that
+        have already been uploaded?
+    gl-code-journal-name: Journal name is required
+    gl-code-value: GL Code value is required
+    has-no-approval-limit: This user does not have an approval limit
+    information-about: 'Information about '
+    information-detail-about: Detailed information about {about}
+    information-regading-detail-text: Information regarding {text} details
+    invalid-form: Request failed to process!
+    invalid-form-description: Some required fields are missing, please check again.
+    max-aging-criteria: Max aging is required
+    max-wo-year-empty: Max WO year is required
+    min-aging-criteria: Min aging is required
+    min-wo-year-empty: Min WO year is required
+    name-case-type: Case Type is required
+    new-submission-value: New submission value
+    page-not-found: 'Page not found '
+    page-not-found-text: Sorry, we could not find the page you are looking for.
+    payment-amount-exceed-approved-amount: Payment amount cannot exceed the approved amount
+    pre-approved-value: Previously approved value
+    proceed-confirmation-message: >-
+        Are you sure you want to process this data? This action cannot be
+        undone.
+    quick-search: Quick search...
+    re-submission-reason:
+        appeal-of-approved-fees: Appeal of approved fees
+        bhjb-changed: >-
+            There is a change in BHJB at the time of fee submission and the BHJB that
+            successfully handled it
+    reject-confirmation: Reject Data Confirmation
+    reject-message: >-
+        Are you sure you want to reject this data? This action cannot be
+        undone.
+    resubmission-reason-invalid: >-
+        Cannot resubmit, the reasons for resubmission have not been met!
+    result-not-found: Result not found
+    scheduler-will-be-run: Scheduler will be executed
+    search-command: Type a command or search...
+    select-from-options: Select {text} from the available options.
+    selected-text: >-
+        No {text} selected | 1 {text} has been selected | {count} {text}
+        has been selected
+    session-timeout: Session Expired
+    session-timeout-text: >-
+        Your session has expired. Please log in again to access the application.
+    start-creating-data: Start by creating new data
+    submission-cost-above-withdrawal-estimate: Submission cost is above the estimated withdrawal cost
+    table:
+        added-text: ''
+        back-to-home: ''
+        data-not-found: ''
+        delete-confirmation: ''
+        delete-message: ''
+        enter-account-number-description: ''
+        enter-contract-number-description: ''
+        enter-pin-number-description: ''
+        info: Showing {start}-{end} of {total} results
+        invalid-form: ''
+        invalid-form-description: ''
+        max-aging-criteria: ''
+        max-wo-year-empty: ''
+        min-aging-criteria: ''
+        min-wo-year-empty: ''
+        name-case-type: ''
+        page-not-found: ''
+        page-not-found-text: ''
+        quick-search: ''
+        result-not-found: ''
+        scheduler-will-be-run: ''
+        search-command: ''
+        select-from-options: ''
+        selected-text: ''
+        session-timeout: ''
+        session-timeout-text: ''
+        start-creating-data: ''
+        table:
+            info: ''
+            total: ''
+        total: '{total} results'
+    update-collateral-status-success: Collateral status updated successfully.
+notification:
+    approved-error: Failed to approve data.
+    approved-success: Data approved successfully.
+    canceled-error: Failed to cancel data.
+    canceled-success: Data canceled successfully.
+    created-error: Failed to add data.
+    created-success: Data added successfully.
+    deleted-error: Failed to delete data.
+    deleted-success: Data deleted successfully.
+    edited-error: Failed to edit data.
+    edited-success: Data edited successfully.
+    rejected-error: Failed to reject data.
+    rejected-success: Data rejected successfully.
+    submitted-error: Failed to submit data.
+    submitted-success: Data submitted successfully.
+    success-text: '{text} Successful'
+validation:
+    account-number-length: Bank account number must be 10 digits
+    aging-max-greater-than-min: Max aging value must be greater than min aging value
+    amount-max-length: Maximum approval value is 17 digits
+    array-min-length: '{path} must have at least {min} items'
+    cannot-be-negative: '{path} cannot be negative'
+    cannot-be-zero: '{path} cannot be 0'
+    contract-number-length: Contract number must be 13 digits
+    default: Invalid field
+    file-length: Number of files cannot exceed {length}.
+    file-size: File size cannot exceed {size}MB.
+    file-type: Only {accept} file types are allowed.
+    max-length: '{path} must be at most {max} characters'
+    min-length: '{path} must be at least {min} characters'
+    must-equal-than: '{path} must be equal to {compare}'
+    must-greater-equal-than: '{path} must be greater than or equal to {compare}'
+    must-greater-than: '{path} must be greater than {compare}'
+    must-greater-than-and-less-equal-than: >-
+        {path} must be greater than {compare} and less than or equal to
+        {less}
+    must-less-equal-than: '{path} must be less than or equal to {compare}'
+    must-less-than: '{path} must be less than {compare}'
+    not-type: '{path} must be {type}'
+    one-month-range-date: Maximum date range is 1 month from the start date
+    one-of: '{path} and {ref} do not match'
+    pattern: Invalid pattern
+    pin-number-length: PIN number must be 3 digits
+    required: Field is required
+    selected-required: At least one {text} must be selected
+    two-weeks-range-date: Maximum date range is 14 days from the start date
+    value-max-length: Maximum value is 10 digits
+    wo-year-max-greater-than-min: Max WO year must be greater than min WO year
