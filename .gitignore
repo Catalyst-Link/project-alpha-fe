@@ -27,3 +27,7 @@ dist-ssr
 # Environment Variables
 environments/*
 !environments/.env.example
+
+# Test Files
+coverage
+html

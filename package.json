@@ -25,6 +25,9 @@
         "lint:fix": "eslint . --fix",
         "prepare": "husky",
         "commit": "cz",
+        "coverage": "vitest --coverage --no-watch",
+        "coverage:watch": "vitest --coverage",
+        "coverage:preview": "vite preview --outDir html",
         "bump:major": "bun pm version major",
         "bump:minor": "bun pm version minor",
         "bump:patch": "bun pm version patch"
@@ -47,6 +50,9 @@
         "@intlify/unplugin-vue-i18n": "^11.2.4",
         "@types/node": "^26.1.1",
         "@vitejs/plugin-vue": "^6.0.7",
+        "@vitest/coverage-v8": "^4.1.10",
+        "@vitest/ui": "^4.1.10",
+        "@vue/test-utils": "^2.4.11",
         "@vue/tsconfig": "^0.9.1",
         "commitizen": "^4.3.2",
         "commitlint-config-cz": "^0.13.3",
@@ -54,6 +60,7 @@
         "eslint": "^10.7.0",
         "eslint-plugin-format": "^2.0.1",
         "fast-glob": "^3.3.3",
+        "happy-dom": "^20.10.6",
         "husky": "^9.1.7",
         "lint-staged": "^17.0.8",
         "typescript": "~6.0.2",
@@ -63,6 +70,7 @@
         "vite": "^8.1.1",
         "vite-plugin-vue-devtools": "^8.1.5",
         "vite-plugin-webfont-dl": "^3.12.0",
+        "vitest": "^4.1.10",
         "vue-tsc": "^3.3.5"
     },
     "lint-staged": {
