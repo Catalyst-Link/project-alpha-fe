@@ -6,7 +6,7 @@ import glob from 'fast-glob';
 import AutoImport from 'unplugin-auto-import/vite';
 import Icon from 'unplugin-icons/vite';
 import Components from 'unplugin-vue-components/vite';
-import { defineConfig, loadEnv } from 'vite';
+import { createLogger, defineConfig, loadEnv } from 'vite';
 import VueDevTools from 'vite-plugin-vue-devtools';
 import { ViteWebfontDownload } from 'vite-plugin-webfont-dl';
 import { VueRouterAutoImports } from 'vue-router/unplugin';
@@ -14,6 +14,7 @@ import VueRouter from 'vue-router/vite';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
+    const logger = createLogger();
     const env = {
         ...process.env,
         ...loadEnv(mode, `${process.cwd()}/environments`, ''),
@@ -21,6 +22,8 @@ export default defineConfig(({ mode }) => {
     const port = !Number.isNaN(Number(env.VITE_APP_DEV_PORT))
         ? Number(env.VITE_APP_DEV_PORT)
         : 8002;
+
+    logger.info(`\n  \x1B[32m➜\x1B[0m  Running in configuration: \x1B[1m${env.VITE_APP_DEV_MODE}\x1B[0m\n`);
 
     return {
         plugins: [
