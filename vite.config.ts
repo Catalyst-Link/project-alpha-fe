@@ -3,6 +3,7 @@ import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import fg from 'fast-glob';
 import { defineConfig, loadEnv } from 'vite';
+import VueDevTools from 'vite-plugin-vue-devtools';
 import VueRouter from 'vue-router/vite';
 
 // https://vite.dev/config/
@@ -29,6 +30,9 @@ export default defineConfig(({ mode }) => {
                     ),
                 ],
             }),
+
+            // https://github.com/vuejs/devtools
+            VueDevTools(),
 
             // https://github.com/vuejs/core
             Vue(),
