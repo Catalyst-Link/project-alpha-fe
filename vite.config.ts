@@ -3,6 +3,7 @@ import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import fg from 'fast-glob';
 import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
 import { defineConfig, loadEnv } from 'vite';
 import VueDevTools from 'vite-plugin-vue-devtools';
 import { VueRouterAutoImports } from 'vue-router/unplugin';
@@ -89,6 +90,20 @@ export default defineConfig(({ mode }) => {
                     'src/modules/**/stores/**',
                     'src/modules/**/types/**',
                     'src/modules/**/utils/**',
+                ],
+            }),
+
+            // https://github.com/unplugin/unplugin-vue-components
+            Components({
+                extensions: ['vue'],
+                include: [
+                    /\.vue$/,
+                    /\.vue\?vue/,
+                ],
+                dts: 'src/component.map.d.ts',
+                dirs: [
+                    'src/core/components',
+                    'src/modules/**/components',
                 ],
             }),
         ],
