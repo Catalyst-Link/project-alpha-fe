@@ -2,8 +2,10 @@ import path from 'node:path';
 import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import fg from 'fast-glob';
+import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig, loadEnv } from 'vite';
 import VueDevTools from 'vite-plugin-vue-devtools';
+import { VueRouterAutoImports } from 'vue-router/unplugin';
 import VueRouter from 'vue-router/vite';
 
 // https://vite.dev/config/
@@ -39,6 +41,56 @@ export default defineConfig(({ mode }) => {
 
             // https://github.com/tailwindlabs/tailwindcss
             Tailwindcss(),
+
+            // https://github.com/unplugin/unplugin-auto-import
+            AutoImport({
+                dts: 'src/import.map.d.ts',
+                vueTemplate: true,
+                imports: [
+                    'vue',
+                    'pinia',
+                    '@vueuse/core',
+                    'date-fns',
+                    'vee-validate',
+                    'vue-i18n',
+                    'vue-router',
+                    VueRouterAutoImports,
+                    {
+                        'axios': [['default', 'axios']],
+                        '@unhead/vue': ['useHead', 'useSeoMeta'],
+                        'vue-router/auto': [''],
+                        'vee-validate': ['useForm'],
+                        '@vee-validate/yup': ['toTypedSchema'],
+                        'yup': ['object', 'string', 'number', 'array', 'mixed', 'date', 'boolean', 'tuple', 'setLocale', ['ref', 'yRef'], 'addMethod', 'setLocale'],
+                        'vue-sonner': ['toast'],
+                        '@tanstack/vue-query': ['useQuery', 'useMutation', 'useQueryClient', 'QueryClient', 'QueryClientProvider'],
+                        'clsx': ['clsx'],
+                        'tailwind-merge': ['twMerge'],
+                        'class-variance-authority': ['cva'],
+                    },
+                ],
+                dirs: [
+                    'src/core/builders/**',
+                    'src/core/composables/**',
+                    'src/core/constants/**',
+                    'src/core/endpoints/**',
+                    'src/core/exceptions/**',
+                    'src/core/services/**',
+                    'src/core/stores/**',
+                    'src/core/types/**',
+                    'src/core/utils/**',
+
+                    'src/modules/**/builders/**',
+                    'src/modules/**/composables/**',
+                    'src/modules/**/constants/**',
+                    'src/modules/**/endpoints/**',
+                    'src/modules/**/exceptions/**',
+                    'src/modules/**/services/**',
+                    'src/modules/**/stores/**',
+                    'src/modules/**/types/**',
+                    'src/modules/**/utils/**',
+                ],
+            }),
         ],
 
         resolve: {
