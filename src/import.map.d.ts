@@ -365,12 +365,15 @@ declare global {
   const templateRef: typeof import('@vueuse/core').templateRef
   const throttledRef: typeof import('@vueuse/core').throttledRef
   const throttledWatch: typeof import('@vueuse/core').throttledWatch
+  const toCapitalizeCase: typeof import('./core/utils/StringUtil').toCapitalizeCase
   const toDate: typeof import('date-fns').toDate
+  const toLowerCase: typeof import('./core/utils/StringUtil').toLowerCase
   const toRaw: typeof import('vue').toRaw
   const toReactive: typeof import('@vueuse/core').toReactive
   const toRef: typeof import('vue').toRef
   const toRefs: typeof import('vue').toRefs
   const toTypedSchema: typeof import('@vee-validate/yup').toTypedSchema
+  const toUpperCase: typeof import('./core/utils/StringUtil').toUpperCase
   const toValue: typeof import('vue').toValue
   const toast: typeof import('vue-sonner').toast
   const triggerRef: typeof import('vue').triggerRef
@@ -606,7 +609,7 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, ShallowRef, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
-  export type { SetupModule } from './core/types/CommonType'
+  export type { SetupModule, ObjectValues, ObjectKeys, Nullable, Undefined, SelectOption } from './core/types/CommonType'
   import('./core/types/CommonType')
 }
 
@@ -975,12 +978,15 @@ declare module 'vue' {
     readonly templateRef: UnwrapRef<typeof import('@vueuse/core')['templateRef']>
     readonly throttledRef: UnwrapRef<typeof import('@vueuse/core')['throttledRef']>
     readonly throttledWatch: UnwrapRef<typeof import('@vueuse/core')['throttledWatch']>
+    readonly toCapitalizeCase: UnwrapRef<typeof import('./core/utils/StringUtil')['toCapitalizeCase']>
     readonly toDate: UnwrapRef<typeof import('date-fns')['toDate']>
+    readonly toLowerCase: UnwrapRef<typeof import('./core/utils/StringUtil')['toLowerCase']>
     readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
     readonly toReactive: UnwrapRef<typeof import('@vueuse/core')['toReactive']>
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
     readonly toTypedSchema: UnwrapRef<typeof import('@vee-validate/yup')['toTypedSchema']>
+    readonly toUpperCase: UnwrapRef<typeof import('./core/utils/StringUtil')['toUpperCase']>
     readonly toValue: UnwrapRef<typeof import('vue')['toValue']>
     readonly toast: UnwrapRef<typeof import('vue-sonner')['toast']>
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
