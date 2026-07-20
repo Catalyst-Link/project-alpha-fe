@@ -134,7 +134,7 @@ bun commit
 ## Project Structure
 
 ```
-vpg/
+project-alpha-fe/
 ├── .husky/                      # Git hooks for enforcing code quality
 ├── .vscode/                     # VS Code specific settings
 ├── environments                 # Environment configuration files
