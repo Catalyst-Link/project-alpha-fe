@@ -5,6 +5,7 @@ import { buttonVariants } from '.';
 
 const {
     as = 'button',
+    type = 'button',
     variant,
     size,
     animate,
@@ -28,6 +29,7 @@ const buttonClass = computed(() => cn(
         :as="as"
         :as-child="asChild"
         :class="buttonClass"
+        :type="type"
     >
         <VSpinner v-if="isLoading" />
         <slot />
