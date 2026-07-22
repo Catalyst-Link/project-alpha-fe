@@ -1,7 +1,8 @@
 export type ResponseStatus = ObjectValues<typeof RESPONSE>;
 export type GenericResponse<T> = {
+    code: number;
     message: ResponseStatus;
-    result: T;
+    data: T;
 };
 export type GenericPagination<T> = {
     elements: string;
