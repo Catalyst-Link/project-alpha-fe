@@ -1,9 +1,10 @@
 import type { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 import axios from 'axios';
+import camelcaseKeys from 'camelcase-keys';
 import NProgress from 'nprogress';
-import { singleton } from 'tsyringe';
+import snakecaseKeys from 'snakecase-keys';
 
-@singleton()
+@Singleton()
 export class HttpServiceImpl implements HttpService {
     private _instance: AxiosInstance;
 
@@ -117,6 +118,14 @@ export class HttpServiceImpl implements HttpService {
             };
         }
 
+        if (request.data && typeof request.data === 'object' && !(request.data instanceof FormData)) {
+            request.data = snakecaseKeys(request.data, { deep: true });
+        }
+
+        if (request.params && typeof request.params === 'object') {
+            request.params = snakecaseKeys(request.params, { deep: true });
+        }
+
         return request;
     }
 
@@ -124,6 +133,11 @@ export class HttpServiceImpl implements HttpService {
         NProgress.done();
 
         const config = response.config as ExtendedInternalAxiosRequestConfig;
+
+        if (response.data && typeof response.data === 'object') {
+            response.data = camelcaseKeys(response.data, { deep: true });
+        }
+
         const { message, result = MESSAGE.HTTP_ERROR } = response.data;
 
         if (context._withErrorHandler(config) && message === RESPONSE.ERROR) {
