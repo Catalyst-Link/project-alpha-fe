@@ -68,7 +68,7 @@ export default defineConfig(({ mode }) => {
                         'vue-router/auto': [''],
                         'vee-validate': ['useForm'],
                         '@vee-validate/yup': ['toTypedSchema'],
-                        'yup': ['object', 'string', 'number', 'array', 'mixed', 'date', 'boolean', 'tuple', 'setLocale', ['ref', 'yRef'], 'addMethod', 'setLocale', 'email'],
+                        'yup': ['object', 'string', 'number', 'array', 'mixed', 'date', 'boolean', 'tuple', 'setLocale', ['ref', 'yRef'], 'addMethod', 'setLocale'],
                         'vue-sonner': ['toast'],
                         '@tanstack/vue-query': ['useQuery', 'useMutation', 'useQueryClient', 'QueryClient', 'QueryClientProvider'],
                         'clsx': ['clsx'],
@@ -159,6 +159,15 @@ export default defineConfig(({ mode }) => {
         server: {
             port,
             strictPort: true,
+            proxy: {
+                [`^/catalyst-link-up`]: {
+                    target: env.VITE_BASE_API_URL,
+                    changeOrigin: true,
+                    secure: false,
+                    ws: true,
+                    rewrite: path => path.replace(/^\/catalyst-link-up/, ''),
+                },
+            },
         },
     };
 });
