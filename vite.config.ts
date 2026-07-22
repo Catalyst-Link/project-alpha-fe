@@ -74,6 +74,7 @@ export default defineConfig(({ mode }) => {
                         'clsx': ['clsx'],
                         'tailwind-merge': ['twMerge'],
                         'class-variance-authority': ['cva'],
+                        'tsyringe': [['injectable', 'Injectable'], ['inject', 'Inject'], ['singleton', 'Singleton']],
                     },
                 ],
                 dirs: [
@@ -82,6 +83,7 @@ export default defineConfig(({ mode }) => {
                     'src/core/constants/**',
                     'src/core/endpoints/**',
                     'src/core/exceptions/**',
+                    'src/core/models/**',
                     'src/core/services/**',
                     'src/core/stores/**',
                     'src/core/types/**',
@@ -92,6 +94,7 @@ export default defineConfig(({ mode }) => {
                     'src/modules/**/constants/**',
                     'src/modules/**/endpoints/**',
                     'src/modules/**/exceptions/**',
+                    'src/modules/**/models/**',
                     'src/modules/**/services/**',
                     'src/modules/**/stores/**',
                     'src/modules/**/types/**',
