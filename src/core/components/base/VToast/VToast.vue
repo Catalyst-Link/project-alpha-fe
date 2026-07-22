@@ -9,6 +9,8 @@ const props = defineProps<ToasterProps>();
     <Toaster
         class="toaster group"
         v-bind="props"
+        rich-colors
+        close-button
         :style="{
             '--normal-bg': 'var(--popover)',
             '--normal-text': 'var(--popover-foreground)',

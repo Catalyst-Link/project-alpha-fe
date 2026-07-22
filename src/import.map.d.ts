@@ -10,6 +10,8 @@ declare global {
   const Endpoint: typeof import('./core/endpoints/Endpoint').Endpoint
   const FieldContextKey: typeof import('vee-validate').FieldContextKey
   const FormContextKey: typeof import('vee-validate').FormContextKey
+  const HttpResponseError: typeof import('./core/exceptions/HttpResponseError').HttpResponseError
+  const HttpServiceImpl: typeof import('./core/services/impl/HttpServiceImpl').HttpServiceImpl
   const MESSAGE: typeof import('./core/constants/CommonConstant').MESSAGE
   const QueryClient: typeof import('@tanstack/vue-query').QueryClient
   const QueryClientProvider: typeof import('@tanstack/vue-query').QueryClientProvider
@@ -424,6 +426,7 @@ declare global {
   const useAsyncQueue: typeof import('@vueuse/core').useAsyncQueue
   const useAsyncState: typeof import('@vueuse/core').useAsyncState
   const useAttrs: typeof import('vue').useAttrs
+  const useAuthStore: typeof import('./modules/auth/login/stores/useAuthStore').useAuthStore
   const useBase64: typeof import('@vueuse/core').useBase64
   const useBattery: typeof import('@vueuse/core').useBattery
   const useBluetooth: typeof import('@vueuse/core').useBluetooth
@@ -636,6 +639,15 @@ declare global {
   export type { Endpoint } from './core/endpoints/Endpoint'
   import('./core/endpoints/Endpoint')
   // @ts-ignore
+  export type { HttpResponseError } from './core/exceptions/HttpResponseError'
+  import('./core/exceptions/HttpResponseError')
+  // @ts-ignore
+  export type { HttpService } from './core/services/HttpService'
+  import('./core/services/HttpService')
+  // @ts-ignore
+  export type { HttpServiceImpl } from './core/services/impl/HttpServiceImpl'
+  import('./core/services/impl/HttpServiceImpl')
+  // @ts-ignore
   export type { ExtendedAxiosRequestConfig, ExtendedInternalAxiosRequestConfig, AxiosErrorResponse } from './core/types/AxiosType'
   import('./core/types/AxiosType')
   // @ts-ignore
@@ -665,6 +677,8 @@ declare module 'vue' {
     readonly Endpoint: UnwrapRef<typeof import('./core/endpoints/Endpoint')['Endpoint']>
     readonly FieldContextKey: UnwrapRef<typeof import('vee-validate')['FieldContextKey']>
     readonly FormContextKey: UnwrapRef<typeof import('vee-validate')['FormContextKey']>
+    readonly HttpResponseError: UnwrapRef<typeof import('./core/exceptions/HttpResponseError')['HttpResponseError']>
+    readonly HttpServiceImpl: UnwrapRef<typeof import('./core/services/impl/HttpServiceImpl')['HttpServiceImpl']>
     readonly MESSAGE: UnwrapRef<typeof import('./core/constants/CommonConstant')['MESSAGE']>
     readonly QueryClient: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClient']>
     readonly QueryClientProvider: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClientProvider']>
@@ -1078,6 +1092,7 @@ declare module 'vue' {
     readonly useAsyncQueue: UnwrapRef<typeof import('@vueuse/core')['useAsyncQueue']>
     readonly useAsyncState: UnwrapRef<typeof import('@vueuse/core')['useAsyncState']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
+    readonly useAuthStore: UnwrapRef<typeof import('./modules/auth/login/stores/useAuthStore')['useAuthStore']>
     readonly useBase64: UnwrapRef<typeof import('@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('@vueuse/core')['useBattery']>
     readonly useBluetooth: UnwrapRef<typeof import('@vueuse/core')['useBluetooth']>
