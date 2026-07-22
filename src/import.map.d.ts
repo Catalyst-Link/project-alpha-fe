@@ -6,6 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const BreadcrumbBuilder: typeof import('./core/builders/BreadcrumbBuilder').BreadcrumbBuilder
   const EffectScope: typeof import('vue').EffectScope
   const Endpoint: typeof import('./core/endpoints/Endpoint').Endpoint
   const FieldContextKey: typeof import('vee-validate').FieldContextKey
@@ -17,6 +18,8 @@ declare global {
   const QueryClientProvider: typeof import('@tanstack/vue-query').QueryClientProvider
   const RESPONSE: typeof import('./core/constants/CommonConstant').RESPONSE
   const SORT_DIRECTION: typeof import('./core/constants/CommonConstant').SORT_DIRECTION
+  const TabBuilder: typeof import('./core/builders/TabBuilder').TabBuilder
+  const TableColumnBuilder: typeof import('./core/builders/TableColumnBuilder').TableColumnBuilder
   const acceptHMRUpdate: typeof import('pinia').acceptHMRUpdate
   const add: typeof import('date-fns').add
   const addBusinessDays: typeof import('date-fns').addBusinessDays
@@ -636,6 +639,15 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, ShallowRef, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
+  export type { BreadcrumbBuilder } from './core/builders/BreadcrumbBuilder'
+  import('./core/builders/BreadcrumbBuilder')
+  // @ts-ignore
+  export type { TabBuilder } from './core/builders/TabBuilder'
+  import('./core/builders/TabBuilder')
+  // @ts-ignore
+  export type { TableColumnBuilder } from './core/builders/TableColumnBuilder'
+  import('./core/builders/TableColumnBuilder')
+  // @ts-ignore
   export type { Endpoint } from './core/endpoints/Endpoint'
   import('./core/endpoints/Endpoint')
   // @ts-ignore
@@ -654,7 +666,7 @@ declare global {
   export type { SetupModule, ObjectValues, ObjectKeys, Nullable, Undefined, SortDirection, SelectOption } from './core/types/CommonType'
   import('./core/types/CommonType')
   // @ts-ignore
-  export type { Breadcrumb, TableColumn } from './core/types/ComponentType'
+  export type { Breadcrumb, TableColumn, Tab } from './core/types/ComponentType'
   import('./core/types/ComponentType')
   // @ts-ignore
   export type { PrivilegeRequirement, PrivilegeMenu, PrivilegeGroupMenu } from './core/types/PrivilegeType'
@@ -673,6 +685,7 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly : UnwrapRef<typeof import('vue-router/auto')['']>
+    readonly BreadcrumbBuilder: UnwrapRef<typeof import('./core/builders/BreadcrumbBuilder')['BreadcrumbBuilder']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly Endpoint: UnwrapRef<typeof import('./core/endpoints/Endpoint')['Endpoint']>
     readonly FieldContextKey: UnwrapRef<typeof import('vee-validate')['FieldContextKey']>
@@ -684,6 +697,8 @@ declare module 'vue' {
     readonly QueryClientProvider: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClientProvider']>
     readonly RESPONSE: UnwrapRef<typeof import('./core/constants/CommonConstant')['RESPONSE']>
     readonly SORT_DIRECTION: UnwrapRef<typeof import('./core/constants/CommonConstant')['SORT_DIRECTION']>
+    readonly TabBuilder: UnwrapRef<typeof import('./core/builders/TabBuilder')['TabBuilder']>
+    readonly TableColumnBuilder: UnwrapRef<typeof import('./core/builders/TableColumnBuilder')['TableColumnBuilder']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly add: UnwrapRef<typeof import('date-fns')['add']>
     readonly addBusinessDays: UnwrapRef<typeof import('date-fns')['addBusinessDays']>

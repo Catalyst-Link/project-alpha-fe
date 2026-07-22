@@ -14,3 +14,9 @@ export type TableColumn<T extends object> = {
     sortKey?: string;
     render?: (row: T, index: number) => Node;
 };
+
+export type Tab<T extends string> = {
+    key: T;
+    name: string;
+    icon?: VNode;
+};
