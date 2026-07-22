@@ -68,7 +68,7 @@ export default defineConfig(({ mode }) => {
                         'vue-router/auto': [''],
                         'vee-validate': ['useForm'],
                         '@vee-validate/yup': ['toTypedSchema'],
-                        'yup': ['object', 'string', 'number', 'array', 'mixed', 'date', 'boolean', 'tuple', 'setLocale', ['ref', 'yRef'], 'addMethod', 'setLocale'],
+                        'yup': ['object', 'string', 'number', 'array', 'mixed', 'date', 'boolean', 'tuple', 'setLocale', ['ref', 'yRef'], 'addMethod', 'setLocale', 'email'],
                         'vue-sonner': ['toast'],
                         '@tanstack/vue-query': ['useQuery', 'useMutation', 'useQueryClient', 'QueryClient', 'QueryClientProvider'],
                         'clsx': ['clsx'],
