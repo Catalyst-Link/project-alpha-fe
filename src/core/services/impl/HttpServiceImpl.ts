@@ -119,11 +119,13 @@ export class HttpServiceImpl implements HttpService {
         }
 
         if (request.data && typeof request.data === 'object' && !(request.data instanceof FormData)) {
-            request.data = snakecaseKeys(request.data, { deep: true });
+            const plainData = JSON.parse(JSON.stringify(request.data));
+            request.data = snakecaseKeys(plainData, { deep: true });
         }
 
         if (request.params && typeof request.params === 'object') {
-            request.params = snakecaseKeys(request.params, { deep: true });
+            const plainParams = JSON.parse(JSON.stringify(request.params));
+            request.params = snakecaseKeys(plainParams, { deep: true });
         }
 
         return request;
