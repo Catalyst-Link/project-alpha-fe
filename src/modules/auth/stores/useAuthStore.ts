@@ -15,8 +15,6 @@ export const useAuthStore = defineStore(
         const logout = () => {
             setToken(null);
             setName(null);
-
-            window.location.href = '/';
         };
 
         return {
