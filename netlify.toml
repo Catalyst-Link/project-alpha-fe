@@ -18,3 +18,9 @@ Referrer-Policy = "strict-origin-when-cross-origin"
 from = "/*"
 to = "/index.html"
 status = 200
+
+[[redirects]]
+from = "/catalyst-link-up/*"
+to = "https://project-alpha-be-94po.onrender.com/:splat"
+status = 200
+force = true
