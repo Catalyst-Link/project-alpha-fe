@@ -6,6 +6,8 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const AuthEndpoint: typeof import('./modules/auth/endpoints/AuthEndpoint').AuthEndpoint
+  const AuthServiceImpl: typeof import('./modules/auth/services/impl/AuthServiceImpl').AuthServiceImpl
   const BreadcrumbBuilder: typeof import('./core/builders/BreadcrumbBuilder').BreadcrumbBuilder
   const EffectScope: typeof import('vue').EffectScope
   const Endpoint: typeof import('./core/endpoints/Endpoint').Endpoint
@@ -13,11 +15,18 @@ declare global {
   const FormContextKey: typeof import('vee-validate').FormContextKey
   const HttpResponseError: typeof import('./core/exceptions/HttpResponseError').HttpResponseError
   const HttpServiceImpl: typeof import('./core/services/impl/HttpServiceImpl').HttpServiceImpl
+  const Inject: typeof import('tsyringe').inject
+  const Injectable: typeof import('tsyringe').injectable
+  const LoginMapper: typeof import('./modules/auth/models/mapper/LoginMapper').LoginMapper
+  const LoginRequestDTO: typeof import('./modules/auth/models/dto/LoginRequestDTO').LoginRequestDTO
+  const LoginResponseDTO: typeof import('./modules/auth/models/dto/LoginResponseDTO').LoginResponseDTO
   const MESSAGE: typeof import('./core/constants/CommonConstant').MESSAGE
+  const PaginationSearchParam: typeof import('./core/models/params/PaginationSearchParam').PaginationSearchParam
   const QueryClient: typeof import('@tanstack/vue-query').QueryClient
   const QueryClientProvider: typeof import('@tanstack/vue-query').QueryClientProvider
   const RESPONSE: typeof import('./core/constants/CommonConstant').RESPONSE
   const SORT_DIRECTION: typeof import('./core/constants/CommonConstant').SORT_DIRECTION
+  const Singleton: typeof import('tsyringe').singleton
   const TabBuilder: typeof import('./core/builders/TabBuilder').TabBuilder
   const TableColumnBuilder: typeof import('./core/builders/TableColumnBuilder').TableColumnBuilder
   const acceptHMRUpdate: typeof import('pinia').acceptHMRUpdate
@@ -78,6 +87,7 @@ declare global {
   const debouncedWatch: typeof import('@vueuse/core').debouncedWatch
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
+  const defineField: typeof import('vee-validate').defineField
   const definePage: typeof import('vue-router/experimental').definePage
   const defineRule: typeof import('vee-validate').defineRule
   const defineStore: typeof import('pinia').defineStore
@@ -177,6 +187,7 @@ declare global {
   const ignorableWatch: typeof import('@vueuse/core').ignorableWatch
   const inject: typeof import('vue').inject
   const injectLocal: typeof import('@vueuse/core').injectLocal
+  const injectable: typeof import('tsyringe').injectable
   const intervalToDuration: typeof import('date-fns').intervalToDuration
   const intlFormat: typeof import('date-fns').intlFormat
   const intlFormatDistance: typeof import('date-fns').intlFormatDistance
@@ -522,6 +533,7 @@ declare global {
   const useMouseInElement: typeof import('@vueuse/core').useMouseInElement
   const useMousePressed: typeof import('@vueuse/core').useMousePressed
   const useMutation: typeof import('@tanstack/vue-query').useMutation
+  const useMutationLogin: typeof import('./modules/auth/composables/mutations/useMutationLogin').useMutationLogin
   const useMutationObserver: typeof import('@vueuse/core').useMutationObserver
   const useNavigatorLanguage: typeof import('@vueuse/core').useNavigatorLanguage
   const useNetwork: typeof import('@vueuse/core').useNetwork
@@ -560,6 +572,7 @@ declare global {
   const useScroll: typeof import('@vueuse/core').useScroll
   const useScrollLock: typeof import('@vueuse/core').useScrollLock
   const useSeoMeta: typeof import('@unhead/vue').useSeoMeta
+  const useService: typeof import('./core/composables/useService').useService
   const useSessionStorage: typeof import('@vueuse/core').useSessionStorage
   const useShare: typeof import('@vueuse/core').useShare
   const useSlots: typeof import('vue').useSlots
@@ -655,6 +668,9 @@ declare global {
   export type { HttpResponseError } from './core/exceptions/HttpResponseError'
   import('./core/exceptions/HttpResponseError')
   // @ts-ignore
+  export type { PaginationSearchParam } from './core/models/params/PaginationSearchParam'
+  import('./core/models/params/PaginationSearchParam')
+  // @ts-ignore
   export type { HttpService } from './core/services/HttpService'
   import('./core/services/HttpService')
   // @ts-ignore
@@ -678,6 +694,21 @@ declare global {
   // @ts-ignore
   export type { ResponseStatus, GenericResponse, GenericPagination } from './core/types/ResponseType'
   import('./core/types/ResponseType')
+  // @ts-ignore
+  export type { AuthEndpoint } from './modules/auth/endpoints/AuthEndpoint'
+  import('./modules/auth/endpoints/AuthEndpoint')
+  // @ts-ignore
+  export type { LoginRequestDTO } from './modules/auth/models/dto/LoginRequestDTO'
+  import('./modules/auth/models/dto/LoginRequestDTO')
+  // @ts-ignore
+  export type { LoginResponseDTO } from './modules/auth/models/dto/LoginResponseDTO'
+  import('./modules/auth/models/dto/LoginResponseDTO')
+  // @ts-ignore
+  export type { AuthService } from './modules/auth/services/AuthService'
+  import('./modules/auth/services/AuthService')
+  // @ts-ignore
+  export type { AuthServiceImpl } from './modules/auth/services/impl/AuthServiceImpl'
+  import('./modules/auth/services/impl/AuthServiceImpl')
 }
 
 // for vue template auto import
@@ -686,6 +717,8 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly : UnwrapRef<typeof import('vue-router/auto')['']>
+    readonly AuthEndpoint: UnwrapRef<typeof import('./modules/auth/endpoints/AuthEndpoint')['AuthEndpoint']>
+    readonly AuthServiceImpl: UnwrapRef<typeof import('./modules/auth/services/impl/AuthServiceImpl')['AuthServiceImpl']>
     readonly BreadcrumbBuilder: UnwrapRef<typeof import('./core/builders/BreadcrumbBuilder')['BreadcrumbBuilder']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly Endpoint: UnwrapRef<typeof import('./core/endpoints/Endpoint')['Endpoint']>
@@ -693,11 +726,17 @@ declare module 'vue' {
     readonly FormContextKey: UnwrapRef<typeof import('vee-validate')['FormContextKey']>
     readonly HttpResponseError: UnwrapRef<typeof import('./core/exceptions/HttpResponseError')['HttpResponseError']>
     readonly HttpServiceImpl: UnwrapRef<typeof import('./core/services/impl/HttpServiceImpl')['HttpServiceImpl']>
+    readonly Inject: UnwrapRef<typeof import('tsyringe')['inject']>
+    readonly Injectable: UnwrapRef<typeof import('tsyringe')['injectable']>
+    readonly LoginRequestDTO: UnwrapRef<typeof import('./modules/auth/models/dto/LoginRequestDTO')['LoginRequestDTO']>
+    readonly LoginResponseDTO: UnwrapRef<typeof import('./modules/auth/models/dto/LoginResponseDTO')['LoginResponseDTO']>
     readonly MESSAGE: UnwrapRef<typeof import('./core/constants/CommonConstant')['MESSAGE']>
+    readonly PaginationSearchParam: UnwrapRef<typeof import('./core/models/params/PaginationSearchParam')['PaginationSearchParam']>
     readonly QueryClient: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClient']>
     readonly QueryClientProvider: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClientProvider']>
     readonly RESPONSE: UnwrapRef<typeof import('./core/constants/CommonConstant')['RESPONSE']>
     readonly SORT_DIRECTION: UnwrapRef<typeof import('./core/constants/CommonConstant')['SORT_DIRECTION']>
+    readonly Singleton: UnwrapRef<typeof import('tsyringe')['singleton']>
     readonly TabBuilder: UnwrapRef<typeof import('./core/builders/TabBuilder')['TabBuilder']>
     readonly TableColumnBuilder: UnwrapRef<typeof import('./core/builders/TableColumnBuilder')['TableColumnBuilder']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
@@ -791,7 +830,6 @@ declare module 'vue' {
     readonly eachYearOfInterval: UnwrapRef<typeof import('date-fns')['eachYearOfInterval']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
-    readonly email: UnwrapRef<typeof import('yup')['email']>
     readonly endOfDay: UnwrapRef<typeof import('date-fns')['endOfDay']>
     readonly endOfDecade: UnwrapRef<typeof import('date-fns')['endOfDecade']>
     readonly endOfHour: UnwrapRef<typeof import('date-fns')['endOfHour']>
@@ -806,7 +844,6 @@ declare module 'vue' {
     readonly endOfWeek: UnwrapRef<typeof import('date-fns')['endOfWeek']>
     readonly endOfYear: UnwrapRef<typeof import('date-fns')['endOfYear']>
     readonly endOfYesterday: UnwrapRef<typeof import('date-fns')['endOfYesterday']>
-    readonly env: UnwrapRef<typeof import('./core/utils/EnvironmentUtil')['env']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly format: UnwrapRef<typeof import('date-fns')['format']>
     readonly formatDistance: UnwrapRef<typeof import('date-fns')['formatDistance']>
@@ -1201,6 +1238,7 @@ declare module 'vue' {
     readonly useMouseInElement: UnwrapRef<typeof import('@vueuse/core')['useMouseInElement']>
     readonly useMousePressed: UnwrapRef<typeof import('@vueuse/core')['useMousePressed']>
     readonly useMutation: UnwrapRef<typeof import('@tanstack/vue-query')['useMutation']>
+    readonly useMutationLogin: UnwrapRef<typeof import('./modules/auth/composables/mutations/useMutationLogin')['useMutationLogin']>
     readonly useMutationObserver: UnwrapRef<typeof import('@vueuse/core')['useMutationObserver']>
     readonly useNavigatorLanguage: UnwrapRef<typeof import('@vueuse/core')['useNavigatorLanguage']>
     readonly useNetwork: UnwrapRef<typeof import('@vueuse/core')['useNetwork']>
@@ -1239,6 +1277,7 @@ declare module 'vue' {
     readonly useScroll: UnwrapRef<typeof import('@vueuse/core')['useScroll']>
     readonly useScrollLock: UnwrapRef<typeof import('@vueuse/core')['useScrollLock']>
     readonly useSeoMeta: UnwrapRef<typeof import('@unhead/vue')['useSeoMeta']>
+    readonly useService: UnwrapRef<typeof import('./core/composables/useService')['useService']>
     readonly useSessionStorage: UnwrapRef<typeof import('@vueuse/core')['useSessionStorage']>
     readonly useShare: UnwrapRef<typeof import('@vueuse/core')['useShare']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
