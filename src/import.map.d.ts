@@ -111,6 +111,7 @@ declare global {
   const eachYearOfInterval: typeof import('date-fns').eachYearOfInterval
   const eagerComputed: typeof import('@vueuse/core').eagerComputed
   const effectScope: typeof import('vue').effectScope
+  const email: typeof import('yup').email
   const endOfDay: typeof import('date-fns').endOfDay
   const endOfDecade: typeof import('date-fns').endOfDecade
   const endOfHour: typeof import('date-fns').endOfHour
@@ -429,7 +430,7 @@ declare global {
   const useAsyncQueue: typeof import('@vueuse/core').useAsyncQueue
   const useAsyncState: typeof import('@vueuse/core').useAsyncState
   const useAttrs: typeof import('vue').useAttrs
-  const useAuthStore: typeof import('./modules/auth/login/stores/useAuthStore').useAuthStore
+  const useAuthStore: typeof import('./modules/auth/stores/useAuthStore').useAuthStore
   const useBase64: typeof import('@vueuse/core').useBase64
   const useBattery: typeof import('@vueuse/core').useBattery
   const useBluetooth: typeof import('@vueuse/core').useBluetooth
@@ -790,6 +791,7 @@ declare module 'vue' {
     readonly eachYearOfInterval: UnwrapRef<typeof import('date-fns')['eachYearOfInterval']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly email: UnwrapRef<typeof import('yup')['email']>
     readonly endOfDay: UnwrapRef<typeof import('date-fns')['endOfDay']>
     readonly endOfDecade: UnwrapRef<typeof import('date-fns')['endOfDecade']>
     readonly endOfHour: UnwrapRef<typeof import('date-fns')['endOfHour']>
@@ -1107,7 +1109,7 @@ declare module 'vue' {
     readonly useAsyncQueue: UnwrapRef<typeof import('@vueuse/core')['useAsyncQueue']>
     readonly useAsyncState: UnwrapRef<typeof import('@vueuse/core')['useAsyncState']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
-    readonly useAuthStore: UnwrapRef<typeof import('./modules/auth/login/stores/useAuthStore')['useAuthStore']>
+    readonly useAuthStore: UnwrapRef<typeof import('./modules/auth/stores/useAuthStore')['useAuthStore']>
     readonly useBase64: UnwrapRef<typeof import('@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('@vueuse/core')['useBattery']>
     readonly useBluetooth: UnwrapRef<typeof import('@vueuse/core')['useBluetooth']>
