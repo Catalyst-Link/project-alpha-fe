@@ -60,6 +60,7 @@ declare module 'vue' {
     VEmptyMedia: typeof import('./core/components/base/VEmpty/VEmptyMedia.vue')['default']
     VEmptyTitle: typeof import('./core/components/base/VEmpty/VEmptyTitle.vue')['default']
     VIcon: typeof import('@iconify/vue')['Icon']
+    VInput: typeof import('./core/components/base/VInput/VInput.vue')['default']
     VLayout: typeof import('./core/components/layouts/VLayout.vue')['default']
     VLayoutBlank: typeof import('./core/components/layouts/VLayoutBlank.vue')['default']
     VLayoutDefault: typeof import('./core/components/layouts/VLayoutDefault.vue')['default']
