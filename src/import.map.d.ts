@@ -651,7 +651,7 @@ declare global {
   export type { ExtendedAxiosRequestConfig, ExtendedInternalAxiosRequestConfig, AxiosErrorResponse } from './core/types/AxiosType'
   import('./core/types/AxiosType')
   // @ts-ignore
-  export type { SetupModule, ObjectValues, ObjectKeys, Nullable, Undefined, SelectOption } from './core/types/CommonType'
+  export type { SetupModule, ObjectValues, ObjectKeys, Nullable, Undefined, SortDirection, SelectOption } from './core/types/CommonType'
   import('./core/types/CommonType')
   // @ts-ignore
   export type { Breadcrumb, TableColumn } from './core/types/ComponentType'
