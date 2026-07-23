@@ -10,6 +10,7 @@ const {
     size,
     animate,
     isLoading,
+    disabled,
     ...props
 } = defineProps<Props>();
 
@@ -18,6 +19,7 @@ const buttonClass = computed(() => cn(
         variant,
         size,
         animate,
+        disabled,
     }),
     props.class,
 ));

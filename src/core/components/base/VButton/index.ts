@@ -26,6 +26,9 @@ export const buttonVariants = cva(
             animate: {
                 true: 'transition-[background-color, transform] duration-200 ease-in-out active:transform active:scale-95',
             },
+            disabled: {
+                true: 'opacity-50 pointer-events-none cursor-not-allowed shadow-none active:scale-100',
+            },
         },
         defaultVariants: {
             variant: 'default',
@@ -43,4 +46,5 @@ export type Props = {
     class?: HTMLAttributes['class'];
     isLoading?: boolean;
     type?: ButtonHTMLAttributes['type'];
+    disabled?: ButtonVariants['disabled'];
 } & PrimitiveProps;
