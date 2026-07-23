@@ -92,6 +92,7 @@ common:
     attachment: Attachment
     auction-fee: Auction Fee
     auction-price: Auction Price
+    authentication-success: You're in!
     authority: Authority
     bank: Bank
     bank-account: Bank Account
@@ -595,6 +596,7 @@ message:
             total: ''
         total: '{total} results'
     update-collateral-status-success: Collateral status updated successfully.
+    welcome-user: Welcome aboard! Great to have you here.
 notification:
     approved-error: Failed to approve data.
     approved-success: Data approved successfully.

@@ -3,6 +3,7 @@ export const useAuthStore = defineStore(
     () => {
         const token = shallowRef<Nullable<string>>();
         const name = shallowRef<Nullable<string>>();
+        const isAuthenticated = computed(() => !!token.value);
 
         const setToken = (value: Nullable<string>) => {
             token.value = value;
@@ -20,6 +21,7 @@ export const useAuthStore = defineStore(
         return {
             token,
             name,
+            isAuthenticated,
             setToken,
             setName,
             logout,

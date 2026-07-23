@@ -8,9 +8,21 @@ export function useMutationLogin(
         unknown
     >,
 ) {
+    const { t } = useI18n();
+    const router = useRouter();
+    const store = useAuthStore();
     const authService = useService<AuthService>('AuthService');
     return useMutation({
         mutationFn: (data: LoginRequestDTO) => authService.login(data),
+        onSuccess: (data) => {
+            const { accessToken } = data.data;
+            store.setToken(accessToken);
+            router.push({ name: 'index' });
+
+            toast.success(t('common.authentication-success'), {
+                description: t('message.welcome-user'),
+            });
+        },
         ...options,
     });
 }

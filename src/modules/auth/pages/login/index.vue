@@ -2,6 +2,14 @@
 definePage({
     name: 'auth-login',
     meta: { requiresAuth: false },
+    beforeEnter: () => {
+        const authStore = useAuthStore();
+        const router = useRouter();
+
+        if (authStore.isAuthenticated) {
+            router.push({ name: 'index' });
+        }
+    },
 });
 
 const { mutate } = useMutationLogin();
