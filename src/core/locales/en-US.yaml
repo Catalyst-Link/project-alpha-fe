@@ -92,6 +92,7 @@ common:
     attachment: Attachment
     auction-fee: Auction Fee
     auction-price: Auction Price
+    authentication-error: Oops! Couldn't log you in
     authentication-success: You're in!
     authority: Authority
     bank: Bank
@@ -597,6 +598,7 @@ message:
         total: '{total} results'
     update-collateral-status-success: Collateral status updated successfully.
     welcome-user: Welcome aboard! Great to have you here.
+    welcome-user-error: That email and password combination doesn't look quite right.
 notification:
     approved-error: Failed to approve data.
     approved-success: Data approved successfully.

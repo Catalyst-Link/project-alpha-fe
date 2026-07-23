@@ -23,6 +23,11 @@ export function useMutationLogin(
                 description: t('message.welcome-user'),
             });
         },
+        onError: () => {
+            toast.error(t('common.authentication-error'), {
+                description: t('message.welcome-user-error'),
+            });
+        },
         ...options,
     });
 }
