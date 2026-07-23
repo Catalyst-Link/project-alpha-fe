@@ -22,9 +22,6 @@ const forwardedProps = useForwardProps(delegatedProps);
         )"
     >
         <slot />
-        <VIcon
-            icon="lucide:chevron-right"
-            class="ml-auto size-4"
-        />
+        <IconLucideChevronRight class="ml-auto size-4" />
     </DropdownMenuSubTrigger>
 </template>

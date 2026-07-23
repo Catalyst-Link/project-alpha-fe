@@ -7,8 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <VIcon
-        icon="lucide:loader-circle"
+    <IconLucideLoaderCircle
         :class="cn('animate-spin block', props.class)"
         role="status"
         aria-label="loading"

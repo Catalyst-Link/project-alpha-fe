@@ -4,7 +4,8 @@ import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import glob from 'fast-glob';
 import AutoImport from 'unplugin-auto-import/vite';
-import Icon from 'unplugin-icons/vite';
+import IconsResolver from 'unplugin-icons/resolver';
+import Icons from 'unplugin-icons/vite';
 import Components from 'unplugin-vue-components/vite';
 import { createLogger, defineConfig, loadEnv } from 'vite';
 import VueDevTools from 'vite-plugin-vue-devtools';
@@ -115,19 +116,14 @@ export default defineConfig(({ mode }) => {
                     'src/modules/**/components',
                 ],
                 resolvers: [
-                    (componentName) => {
-                        if (componentName === 'VIcon') {
-                            return {
-                                name: 'Icon',
-                                from: '@iconify/vue',
-                            };
-                        }
-                    },
+                    IconsResolver({
+                        prefix: 'icon',
+                    }),
                 ],
             }),
 
             // https://github.com/unplugin/unplugin-icons
-            Icon({
+            Icons({
                 autoInstall: true,
             }),
 

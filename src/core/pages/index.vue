@@ -14,7 +14,7 @@ pageStore.setIsLoadingTitle(false);
         <VEmpty>
             <VEmptyHeader>
                 <VEmptyMedia variant="icon">
-                    <VIcon icon="lucide:folder-code" />
+                    <IconLucideFolderCode />
                 </VEmptyMedia>
                 <VEmptyTitle>No Pages Yet</VEmptyTitle>
                 <VEmptyDescription>

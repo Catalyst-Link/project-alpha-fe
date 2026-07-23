@@ -12,6 +12,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Icon: typeof import('@iconify/vue')['Icon']
+    IconLucideFolderCode: typeof import('~icons/lucide/folder-code')['default']
+    IconLucideLoaderCircle: typeof import('~icons/lucide/loader-circle')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TooltipContent: typeof import('./core/components/base/VTooltip/TooltipContent.vue')['default']

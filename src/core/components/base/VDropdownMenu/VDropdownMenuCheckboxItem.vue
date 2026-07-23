@@ -25,10 +25,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         <span class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
             <DropdownMenuItemIndicator>
                 <slot name="indicator-icon">
-                    <VIcon
-                        icon="lucide:check"
-                        class="size-4"
-                    />
+                    <IconLucideCheck class="size-4" />
                 </slot>
             </DropdownMenuItemIndicator>
         </span>
