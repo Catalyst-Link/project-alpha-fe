@@ -3,7 +3,17 @@ export class Endpoint {
     private static _version: Undefined<string>;
     private static _module: Undefined<string>;
 
-    public static setEndpoint({ base, module, version }: { version?: string; base: string; module?: string }) {
+    public static setEndpoint(
+        {
+            base = ENDPOINT_PATH,
+            module,
+            version = ENDPOINT_VERSION.V1,
+        }: {
+            version?: string;
+            base?: string;
+            module?: string;
+        },
+    ) {
         this._base = base;
         this._version = version;
         this._module = module;

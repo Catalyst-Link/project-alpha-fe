@@ -9,6 +9,8 @@ declare global {
   const AuthEndpoint: typeof import('./modules/auth/endpoints/AuthEndpoint').AuthEndpoint
   const AuthServiceImpl: typeof import('./modules/auth/services/impl/AuthServiceImpl').AuthServiceImpl
   const BreadcrumbBuilder: typeof import('./core/builders/BreadcrumbBuilder').BreadcrumbBuilder
+  const ENDPOINT_PATH: typeof import('./core/constants/CommonConstant').ENDPOINT_PATH
+  const ENDPOINT_VERSION: typeof import('./core/constants/CommonConstant').ENDPOINT_VERSION
   const EffectScope: typeof import('vue').EffectScope
   const Endpoint: typeof import('./core/endpoints/Endpoint').Endpoint
   const FieldContextKey: typeof import('vee-validate').FieldContextKey
@@ -720,6 +722,8 @@ declare module 'vue' {
     readonly AuthEndpoint: UnwrapRef<typeof import('./modules/auth/endpoints/AuthEndpoint')['AuthEndpoint']>
     readonly AuthServiceImpl: UnwrapRef<typeof import('./modules/auth/services/impl/AuthServiceImpl')['AuthServiceImpl']>
     readonly BreadcrumbBuilder: UnwrapRef<typeof import('./core/builders/BreadcrumbBuilder')['BreadcrumbBuilder']>
+    readonly ENDPOINT_PATH: UnwrapRef<typeof import('./core/constants/CommonConstant')['ENDPOINT_PATH']>
+    readonly ENDPOINT_VERSION: UnwrapRef<typeof import('./core/constants/CommonConstant')['ENDPOINT_VERSION']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly Endpoint: UnwrapRef<typeof import('./core/endpoints/Endpoint')['Endpoint']>
     readonly FieldContextKey: UnwrapRef<typeof import('vee-validate')['FieldContextKey']>
