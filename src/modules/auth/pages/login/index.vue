@@ -12,7 +12,7 @@ definePage({
     },
 });
 
-const { mutate } = useMutationLogin();
+const { mutate, isPending } = useMutationLogin();
 const state = reactive(new LoginRequestDTO());
 const schema = computed(() => object({
     email: string().email().required(),
@@ -42,7 +42,11 @@ const handleFormSubmit = handleSubmit(() =>
             name="password"
         />
 
-        <VButton type="submit">
+        <VButton
+            type="submit"
+            :disabled="isPending"
+            :is-loading="isPending"
+        >
             Sign in
         </VButton>
     </form>
