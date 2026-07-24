@@ -12,6 +12,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Icon: typeof import('@iconify/vue')['Icon']
+    IconLucideAlertCircle: typeof import('~icons/lucide/alert-circle')['default']
     IconLucideFolderCode: typeof import('~icons/lucide/folder-code')['default']
     IconLucideLoaderCircle: typeof import('~icons/lucide/loader-circle')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -63,6 +64,7 @@ declare module 'vue' {
     VEmptyTitle: typeof import('./core/components/base/VEmpty/VEmptyTitle.vue')['default']
     VIcon: typeof import('@iconify/vue')['Icon']
     VInput: typeof import('./core/components/base/VInput/VInput.vue')['default']
+    VLabel: typeof import('./core/components/base/VLabel/VLabel.vue')['default']
     VLayout: typeof import('./core/components/layouts/VLayout.vue')['default']
     VLayoutBlank: typeof import('./core/components/layouts/VLayoutBlank.vue')['default']
     VLayoutDefault: typeof import('./core/components/layouts/VLayoutDefault.vue')['default']

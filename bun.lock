@@ -5,7 +5,7 @@
     "": {
       "name": "project-alpha-fe",
       "dependencies": {
-        "@lucide/vue": "^1.24.0",
+        "@lucide/vue": "^1.26.0",
         "@tailwindcss/vite": "^4.3.2",
         "@tanstack/vue-query": "^5.101.2",
         "@types/yup": "^0.32.0",
@@ -333,7 +333,7 @@
 
     "@keyv/serialize": ["@keyv/serialize@1.1.1", "", {}, "sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA=="],
 
-    "@lucide/vue": ["@lucide/vue@1.24.0", "", { "peerDependencies": { "vue": ">=3.0.1" } }, "sha512-5bNPX0G2YEWdUlBYk7pE8SgDg/f1mkIFpJ9vtE44pW/cwRz7Ioc0tOTESoVJAPvxIELSmYekX+XXIJMjsswNIg=="],
+    "@lucide/vue": ["@lucide/vue@1.26.0", "", { "peerDependencies": { "vue": ">=3.0.1" } }, "sha512-jz00zLm8+i7VzBuQTbmjChIvIKehaIK5YbOVC+bab7qTh4JTkCd0XJQ4l5TY57gT08fMPVlvUITROB/vm/xImA=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.1.6", "", { "dependencies": { "@tybys/wasm-util": "^0.10.3" }, "peerDependencies": { "@emnapi/core": "^1.7.1", "@emnapi/runtime": "^1.7.1" } }, "sha512-ZLv/JdUfkvOy9eCnnBaGfiO+XimbjebAeO+MRQqD/B+FR1tnRN0tpKSJHRbE8sFfS6aqsXZ67TQjfwfsxULVbg=="],
 

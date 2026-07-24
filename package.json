@@ -33,7 +33,7 @@
         "bump:patch": "bun pm version patch"
     },
     "dependencies": {
-        "@lucide/vue": "^1.24.0",
+        "@lucide/vue": "^1.26.0",
         "@tailwindcss/vite": "^4.3.2",
         "@tanstack/vue-query": "^5.101.2",
         "@types/yup": "^0.32.0",

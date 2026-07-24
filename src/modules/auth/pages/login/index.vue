@@ -31,23 +31,32 @@ const handleFormSubmit = handleSubmit(() =>
 </script>
 
 <template>
-    <form @submit.prevent="handleFormSubmit">
-        <VInput
-            v-model="state.email"
-            name="email"
-        />
-
-        <VInput
-            v-model="state.password"
-            name="password"
-        />
-
-        <VButton
-            type="submit"
-            :disabled="isPending"
-            :is-loading="isPending"
+    <VContainer>
+        <form
+            class="flex flex-col gap-y-4"
+            @submit.prevent="handleFormSubmit"
         >
-            Sign in
-        </VButton>
-    </form>
+            <VInput
+                v-model="state.email"
+                name="email"
+                label="Email"
+                type="email"
+            />
+
+            <VInput
+                v-model="state.password"
+                name="password"
+                label="Password"
+                type="password"
+            />
+
+            <VButton
+                type="submit"
+                :disabled="isPending"
+                :is-loading="isPending"
+            >
+                Sign in
+            </VButton>
+        </form>
+    </VContainer>
 </template>
