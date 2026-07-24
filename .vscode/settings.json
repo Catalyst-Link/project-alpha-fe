@@ -127,6 +127,7 @@
         "versionrc",
         "Vite",
         "Vitest",
-        "vueuse"
+        "vueuse",
+        "tsyringe"
     ]
 }
