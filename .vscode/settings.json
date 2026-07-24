@@ -128,6 +128,10 @@
         "Vite",
         "Vitest",
         "vueuse",
-        "tsyringe"
+        "tsyringe",
+        "lucide",
+        "snakecase",
+        "sonner",
+        "nprogress"
     ]
 }

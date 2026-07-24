@@ -6,7 +6,7 @@ export type ExtendedAxiosRequestConfig<D = any> = {
     _notification?: boolean;
     _handler?: boolean;
     _retry?: boolean;
-    _tokenTarget?: 'OAuth' | 'FMC' | 'FIFGO';
+    _tokenTarget?: 'OAuth';
 } & AxiosRequestConfig<D>;
 
 export type ExtendedInternalAxiosRequestConfig<D = any> = {
@@ -15,7 +15,7 @@ export type ExtendedInternalAxiosRequestConfig<D = any> = {
     _notification?: boolean;
     _handler?: boolean;
     _retry?: boolean;
-    _tokenTarget?: 'OAuth' | 'FMC' | 'FIFGO';
+    _tokenTarget?: 'OAuth';
 } & InternalAxiosRequestConfig<D>;
 
 export type AxiosErrorResponse = AxiosResponse<ErrorResponse>;
