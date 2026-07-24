@@ -8,7 +8,7 @@ export const RESPONSE = {
     ERROR: 'ERROR',
 } as const;
 export const MESSAGE = {
-    HTTP_ERROR: 'Terjadi kesalahan. Coba periksa koneksi Anda atau hubungi administrator',
+    HTTP_ERROR: 'Something went wrong. Please check your connection or contact the administrator.',
 } as const;
 export const SORT_DIRECTION = {
     ASCENDING: 'asc',
