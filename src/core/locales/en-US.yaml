@@ -481,7 +481,8 @@ common:
     yes: Yes
     yes-sure: Yes, I am sure
     zip-code: Zip Code
-menu: {}
+menu:
+    dashboard: Dashboard
 message:
     404: '404'
     added-text: >-
