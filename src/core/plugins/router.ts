@@ -3,6 +3,14 @@ import NProgress from 'nprogress';
 import { createRouter, createWebHistory } from 'vue-router';
 import { handleHotUpdate, routes } from 'vue-router/auto-routes';
 
+function handleAuthGuard() {
+    const authStore = useAuthStore();
+
+    if (!authStore.token) {
+        authStore.logout();
+    }
+}
+
 export function install(app: App<Element>) {
     const router = createRouter({
         history: createWebHistory(),
@@ -13,8 +21,16 @@ export function install(app: App<Element>) {
         handleHotUpdate(router);
     }
 
-    router.beforeEach(() => {
+    router.beforeEach((to, _, next) => {
         window.scrollTo(0, 0);
+
+        if (to.matched.some(record => record.meta.requiresAuth)) {
+            handleAuthGuard();
+        }
+        else {
+            next();
+        }
+
         NProgress.start();
     });
 

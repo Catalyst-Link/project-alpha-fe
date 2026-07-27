@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 definePage({
     name: 'auth-login',
-    meta: { requiresAuth: false },
+    meta: {
+        requiresAuth: false,
+        layout: 'Blank',
+    },
     beforeEnter: () => {
         const authStore = useAuthStore();
         const router = useRouter();
