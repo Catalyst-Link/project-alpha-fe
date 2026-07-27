@@ -23,9 +23,9 @@ declare module 'vue' {
     IconLucideX: typeof import('~icons/lucide/x')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TooltipContent: typeof import('./core/components/base/VTooltip/TooltipContent.vue')['default']
-    TooltipProvider: typeof import('./core/components/base/VTooltip/TooltipProvider.vue')['default']
-    TooltipTrigger: typeof import('./core/components/base/VTooltip/TooltipTrigger.vue')['default']
+    TooltipContent: typeof import('./core/components/base/VTooltip/VTooltipContent.vue/index.js')['default']
+    TooltipProvider: typeof import('./core/components/base/VTooltip/VTooltipProvider.vue')['default']
+    TooltipTrigger: typeof import('./core/components/base/VTooltip/VTooltipTrigger.vue')['default']
     VAccordion: typeof import('./core/components/base/VAccordion/VAccordion.vue')['default']
     VAccordionContent: typeof import('./core/components/base/VAccordion/VAccordionContent.vue')['default']
     VAccordionItem: typeof import('./core/components/base/VAccordion/VAccordionItem.vue')['default']
@@ -125,5 +125,9 @@ declare module 'vue' {
     VTextArea: typeof import('./core/components/base/VTextArea/VTextArea.vue')['default']
     VToast: typeof import('./core/components/base/VToast/VToast.vue')['default']
     VTooltip: typeof import('./core/components/base/VTooltip/VTooltip.vue')['default']
+    VTooltipContent: typeof import('./core/components/base/VTooltip/VTooltipContent.vue')['default']
+    VTooltipProvider: typeof import('./core/components/base/VTooltip/VTooltipProvider.vue')['default']
+    VTooltipTrigger: typeof import('./core/components/base/VTooltip/VTooltipTrigger.vue')['default']
+    VVTooltip: typeof import('./core/components/base/VTooltip/VTooltip.vue/index.js')['default']
   }
 }

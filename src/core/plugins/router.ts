@@ -21,14 +21,14 @@ export function install(app: App<Element>) {
         handleHotUpdate(router);
     }
 
-    router.beforeEach((to, _, next) => {
+    router.beforeEach((to) => {
         window.scrollTo(0, 0);
 
         if (to.matched.some(record => record.meta.requiresAuth)) {
             handleAuthGuard();
         }
         else {
-            next();
+            return true;
         }
 
         NProgress.start();
