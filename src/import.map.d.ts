@@ -27,6 +27,12 @@ declare global {
   const QueryClient: typeof import('@tanstack/vue-query').QueryClient
   const QueryClientProvider: typeof import('@tanstack/vue-query').QueryClientProvider
   const RESPONSE: typeof import('./core/constants/CommonConstant').RESPONSE
+  const SIDEBAR_COOKIE_MAX_AGE: typeof import('./core/constants/CommonConstant').SIDEBAR_COOKIE_MAX_AGE
+  const SIDEBAR_COOKIE_NAME: typeof import('./core/constants/CommonConstant').SIDEBAR_COOKIE_NAME
+  const SIDEBAR_KEYBOARD_SHORTCUT: typeof import('./core/constants/CommonConstant').SIDEBAR_KEYBOARD_SHORTCUT
+  const SIDEBAR_WIDTH: typeof import('./core/constants/CommonConstant').SIDEBAR_WIDTH
+  const SIDEBAR_WIDTH_ICON: typeof import('./core/constants/CommonConstant').SIDEBAR_WIDTH_ICON
+  const SIDEBAR_WIDTH_MOBILE: typeof import('./core/constants/CommonConstant').SIDEBAR_WIDTH_MOBILE
   const SORT_DIRECTION: typeof import('./core/constants/CommonConstant').SORT_DIRECTION
   const Singleton: typeof import('tsyringe').singleton
   const TabBuilder: typeof import('./core/builders/TabBuilder').TabBuilder
@@ -323,6 +329,7 @@ declare global {
   const previousWednesday: typeof import('date-fns').previousWednesday
   const provide: typeof import('vue').provide
   const provideLocal: typeof import('@vueuse/core').provideLocal
+  const provideSidebarContext: typeof import('./core/composables/useSidebar').provideSidebarContext
   const quartersToMonths: typeof import('date-fns').quartersToMonths
   const quartersToYears: typeof import('date-fns').quartersToYears
   const reactify: typeof import('@vueuse/core').reactify
@@ -577,6 +584,7 @@ declare global {
   const useService: typeof import('./core/composables/useService').useService
   const useSessionStorage: typeof import('@vueuse/core').useSessionStorage
   const useShare: typeof import('@vueuse/core').useShare
+  const useSidebar: typeof import('./core/composables/useSidebar').useSidebar
   const useSlots: typeof import('vue').useSlots
   const useSorted: typeof import('@vueuse/core').useSorted
   const useSpeechRecognition: typeof import('@vueuse/core').useSpeechRecognition
@@ -739,6 +747,12 @@ declare module 'vue' {
     readonly QueryClient: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClient']>
     readonly QueryClientProvider: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClientProvider']>
     readonly RESPONSE: UnwrapRef<typeof import('./core/constants/CommonConstant')['RESPONSE']>
+    readonly SIDEBAR_COOKIE_MAX_AGE: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_COOKIE_MAX_AGE']>
+    readonly SIDEBAR_COOKIE_NAME: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_COOKIE_NAME']>
+    readonly SIDEBAR_KEYBOARD_SHORTCUT: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_KEYBOARD_SHORTCUT']>
+    readonly SIDEBAR_WIDTH: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_WIDTH']>
+    readonly SIDEBAR_WIDTH_ICON: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_WIDTH_ICON']>
+    readonly SIDEBAR_WIDTH_MOBILE: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_WIDTH_MOBILE']>
     readonly SORT_DIRECTION: UnwrapRef<typeof import('./core/constants/CommonConstant')['SORT_DIRECTION']>
     readonly Singleton: UnwrapRef<typeof import('tsyringe')['singleton']>
     readonly TabBuilder: UnwrapRef<typeof import('./core/builders/TabBuilder')['TabBuilder']>
@@ -1031,6 +1045,7 @@ declare module 'vue' {
     readonly previousWednesday: UnwrapRef<typeof import('date-fns')['previousWednesday']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly provideLocal: UnwrapRef<typeof import('@vueuse/core')['provideLocal']>
+    readonly provideSidebarContext: UnwrapRef<typeof import('./core/composables/useSidebar')['provideSidebarContext']>
     readonly quartersToMonths: UnwrapRef<typeof import('date-fns')['quartersToMonths']>
     readonly quartersToYears: UnwrapRef<typeof import('date-fns')['quartersToYears']>
     readonly reactify: UnwrapRef<typeof import('@vueuse/core')['reactify']>
@@ -1284,6 +1299,7 @@ declare module 'vue' {
     readonly useService: UnwrapRef<typeof import('./core/composables/useService')['useService']>
     readonly useSessionStorage: UnwrapRef<typeof import('@vueuse/core')['useSessionStorage']>
     readonly useShare: UnwrapRef<typeof import('@vueuse/core')['useShare']>
+    readonly useSidebar: UnwrapRef<typeof import('./core/composables/useSidebar')['useSidebar']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useSorted: UnwrapRef<typeof import('@vueuse/core')['useSorted']>
     readonly useSpeechRecognition: UnwrapRef<typeof import('@vueuse/core')['useSpeechRecognition']>

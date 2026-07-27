@@ -45,6 +45,13 @@ declare module 'vue-router/auto-routes' {
       { catchAll: ParamValue<false> },
       | never
     >,
+    'dashboard': RouteRecordInfo<
+      'dashboard',
+      '/dashboard',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     'auth-login': RouteRecordInfo<
       'auth-login',
       '/login',
@@ -80,6 +87,14 @@ declare module 'vue-router/auto-routes' {
         | never
       pathParamNames:
         | 'catchAll'
+    }
+    'src/modules/dashboard/pages/dashboard/index.vue': {
+      routes:
+        | 'dashboard'
+      views:
+        | never
+      pathParamNames:
+        | never
     }
     'src/modules/auth/pages/login/index.vue': {
       routes:
