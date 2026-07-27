@@ -693,7 +693,7 @@ declare global {
   export type { SetupModule, ObjectValues, ObjectKeys, Nullable, Undefined, SortDirection, SelectOption } from './core/types/CommonType'
   import('./core/types/CommonType')
   // @ts-ignore
-  export type { Breadcrumb, TableColumn, Tab } from './core/types/ComponentType'
+  export type { Breadcrumb, TableColumn, Tab, ProviderSidebarContextState, ProviderSidebarContext } from './core/types/ComponentType'
   import('./core/types/ComponentType')
   // @ts-ignore
   export type { PrivilegeRequirement, PrivilegeMenu, PrivilegeGroupMenu } from './core/types/PrivilegeType'
