@@ -11,7 +11,6 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Icon: typeof import('@iconify/vue')['Icon']
     IconLucideAlertCircle: typeof import('~icons/lucide/alert-circle')['default']
     IconLucideCheck: typeof import('~icons/lucide/check')['default']
     IconLucideFolderCode: typeof import('~icons/lucide/folder-code')['default']
@@ -23,9 +22,6 @@ declare module 'vue' {
     IconLucideX: typeof import('~icons/lucide/x')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TooltipContent: typeof import('./core/components/base/VTooltip/VTooltipContent.vue/index.js')['default']
-    TooltipProvider: typeof import('./core/components/base/VTooltip/VTooltipProvider.vue')['default']
-    TooltipTrigger: typeof import('./core/components/base/VTooltip/VTooltipTrigger.vue')['default']
     VAccordion: typeof import('./core/components/base/VAccordion/VAccordion.vue')['default']
     VAccordionContent: typeof import('./core/components/base/VAccordion/VAccordionContent.vue')['default']
     VAccordionItem: typeof import('./core/components/base/VAccordion/VAccordionItem.vue')['default']
@@ -48,6 +44,7 @@ declare module 'vue' {
     VBadge: typeof import('./core/components/base/VBadge/VBadge.vue')['default']
     VButton: typeof import('./core/components/base/VButton/VButton.vue')['default']
     VCheckbox: typeof import('./core/components/base/VCheckbox/VCheckbox.vue')['default']
+    VCheckboxRoot: typeof import('./core/components/base/VCheckbox/VCheckboxRoot.vue')['default']
     VContainer: typeof import('./core/components/base/VContainer/VContainer.vue')['default']
     VDropdownMenu: typeof import('./core/components/base/VDropdownMenu/VDropdownMenu.vue')['default']
     VDropdownMenuCheckboxItem: typeof import('./core/components/base/VDropdownMenu/VDropdownMenuCheckboxItem.vue')['default']
@@ -70,7 +67,6 @@ declare module 'vue' {
     VEmptyMedia: typeof import('./core/components/base/VEmpty/VEmptyMedia.vue')['default']
     VEmptyTitle: typeof import('./core/components/base/VEmpty/VEmptyTitle.vue')['default']
     VHeader: typeof import('./core/components/base/VHeader/VHeader.vue')['default']
-    VIcon: typeof import('@iconify/vue')['Icon']
     VInput: typeof import('./core/components/base/VInput/VInput.vue')['default']
     VInputGroup: typeof import('./core/components/base/VInputGroup/VInputGroup.vue')['default']
     VInputGroupAddon: typeof import('./core/components/base/VInputGroup/VInputGroupAddon.vue')['default']
@@ -82,6 +78,7 @@ declare module 'vue' {
     VLayout: typeof import('./core/components/layouts/VLayout.vue')['default']
     VLayoutBlank: typeof import('./core/components/layouts/VLayoutBlank.vue')['default']
     VLayoutDefault: typeof import('./core/components/layouts/VLayoutDefault.vue')['default']
+    VOverlay: typeof import('./core/components/base/VOverlay/VOverlay.vue')['default']
     VScrollArea: typeof import('./core/components/base/VScrollArea/VScrollArea.vue')['default']
     VScrollBar: typeof import('./core/components/base/VScrollArea/VScrollBar.vue')['default']
     VSeparator: typeof import('./core/components/base/VSeparator/VSeparator.vue')['default']
@@ -128,6 +125,5 @@ declare module 'vue' {
     VTooltipContent: typeof import('./core/components/base/VTooltip/VTooltipContent.vue')['default']
     VTooltipProvider: typeof import('./core/components/base/VTooltip/VTooltipProvider.vue')['default']
     VTooltipTrigger: typeof import('./core/components/base/VTooltip/VTooltipTrigger.vue')['default']
-    VVTooltip: typeof import('./core/components/base/VTooltip/VTooltip.vue/index.js')['default']
   }
 }

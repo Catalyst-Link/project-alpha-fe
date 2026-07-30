@@ -3,19 +3,13 @@ import type { VariantProps } from 'class-variance-authority';
 export const textVariants = cva('', {
     variants: {
         variant: {
-            h1: 'scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance',
-            h2: 'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0',
-            h3: 'scroll-m-20 text-2xl font-semibold tracking-tight',
-            h4: 'scroll-m-20 text-xl font-semibold tracking-tight',
-            p: 'leading-7 not-first:mt-6',
-            blockqoute: 'mt-6 border-l-2 pl-6 italic',
-            td: 'border px-4 py-2 text-left [[align=center]]:text-center [[align=right]]:text-right',
-            li: 'ul',
-            code: 'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
-            modal: 'text-xl text-muted-foreground',
-            large: 'text-lg font-semibold',
-            small: 'text-sm font-medium leading-none',
-            muted: 'text-sm text-muted-foreground',
+            h1: 'text-[2rem] xl:text-[3.45rem] leading-tight font-dm-sans',
+            h2: 'text-[2rem] xl:text-[2.75rem] leading-tight',
+            h3: 'text-2xl xl:text-[2.25rem] leading-tight',
+            h4: 'text-xl xl:text-3xl leading-tight',
+            h5: 'text-lg xl:text-2xl leading-tight font-plus-jakarta-sans',
+            body: 'text-sm xl:text-lg font-plus-jakarta-sans font-light',
+            subbody: 'text-xs xl:text-sm leading-relaxed font-plus-jakarta-sans',
         },
         color: {
             'default': 'text-foreground',
@@ -41,7 +35,7 @@ export const textVariants = cva('', {
         },
     },
     defaultVariants: {
-        variant: 'p',
+        variant: 'body',
         color: 'default',
         align: 'left',
         transform: 'none',
