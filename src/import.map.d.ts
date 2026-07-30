@@ -19,7 +19,6 @@ declare global {
   const HttpServiceImpl: typeof import('./core/services/impl/HttpServiceImpl').HttpServiceImpl
   const Inject: typeof import('tsyringe').inject
   const Injectable: typeof import('tsyringe').injectable
-  const LoginMapper: typeof import('./modules/auth/models/mapper/LoginMapper').LoginMapper
   const LoginRequestDTO: typeof import('./modules/auth/models/dto/LoginRequestDTO').LoginRequestDTO
   const LoginResponseDTO: typeof import('./modules/auth/models/dto/LoginResponseDTO').LoginResponseDTO
   const MESSAGE: typeof import('./core/constants/CommonConstant').MESSAGE
@@ -95,7 +94,6 @@ declare global {
   const debouncedWatch: typeof import('@vueuse/core').debouncedWatch
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
-  const defineField: typeof import('vee-validate').defineField
   const definePage: typeof import('vue-router/experimental').definePage
   const defineRule: typeof import('vee-validate').defineRule
   const defineStore: typeof import('pinia').defineStore
@@ -129,7 +127,6 @@ declare global {
   const eachYearOfInterval: typeof import('date-fns').eachYearOfInterval
   const eagerComputed: typeof import('@vueuse/core').eagerComputed
   const effectScope: typeof import('vue').effectScope
-  const email: typeof import('yup').email
   const endOfDay: typeof import('date-fns').endOfDay
   const endOfDecade: typeof import('date-fns').endOfDecade
   const endOfHour: typeof import('date-fns').endOfHour
@@ -195,7 +192,6 @@ declare global {
   const ignorableWatch: typeof import('@vueuse/core').ignorableWatch
   const inject: typeof import('vue').inject
   const injectLocal: typeof import('@vueuse/core').injectLocal
-  const injectable: typeof import('tsyringe').injectable
   const intervalToDuration: typeof import('date-fns').intervalToDuration
   const intlFormat: typeof import('date-fns').intlFormat
   const intlFormatDistance: typeof import('date-fns').intlFormatDistance
@@ -346,7 +342,6 @@ declare global {
   const refManualReset: typeof import('@vueuse/core').refManualReset
   const refThrottled: typeof import('@vueuse/core').refThrottled
   const refWithControl: typeof import('@vueuse/core').refWithControl
-  const registerLayouts: typeof import('./core/utils/HelperUtil').registerLayouts
   const resolveComponent: typeof import('vue').resolveComponent
   const roundToNearestMinutes: typeof import('date-fns').roundToNearestMinutes
   const secondsToHours: typeof import('date-fns').secondsToHours
@@ -862,6 +857,7 @@ declare module 'vue' {
     readonly endOfWeek: UnwrapRef<typeof import('date-fns')['endOfWeek']>
     readonly endOfYear: UnwrapRef<typeof import('date-fns')['endOfYear']>
     readonly endOfYesterday: UnwrapRef<typeof import('date-fns')['endOfYesterday']>
+    readonly env: UnwrapRef<typeof import('./core/utils/EnvironmentUtil')['env']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly format: UnwrapRef<typeof import('date-fns')['format']>
     readonly formatDistance: UnwrapRef<typeof import('date-fns')['formatDistance']>
