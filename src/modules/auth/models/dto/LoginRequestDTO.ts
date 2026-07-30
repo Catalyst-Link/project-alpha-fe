@@ -8,7 +8,7 @@ export class LoginRequestDTO {
     }
 
     setPassword(value: string) {
-        this.password = value;
+        this.password = encryptAES(value);
         return this;
     }
 }
