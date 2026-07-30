@@ -10,8 +10,6 @@ const { t } = useI18n();
 const pageStore = usePageStore();
 pageStore.setTitle(t('message.start-creating-data'));
 pageStore.setIsLoadingTitle(false);
-
-const secret = env.VITE_AES_SECRET_KEY;
 </script>
 
 <template>
@@ -20,7 +18,7 @@ const secret = env.VITE_AES_SECRET_KEY;
             <VEmptyMedia variant="icon">
                 <IconLucideFolderCode />
             </VEmptyMedia>
-            <VEmptyTitle>No Pages Yet {{ secret }}</VEmptyTitle>
+            <VEmptyTitle>No Pages Yet</VEmptyTitle>
             <VEmptyDescription>
                 You haven't created any pages yet. Get started by creating your first pages.
             </VEmptyDescription>

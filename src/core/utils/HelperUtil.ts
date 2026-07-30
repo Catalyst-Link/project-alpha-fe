@@ -1,5 +1,3 @@
-import CryptoJS from 'crypto-js';
-
 /**
  * @description check specific value is array
  */
@@ -74,20 +72,3 @@ export const numberOrNull = (value?: Nullable<number>) => isNumber(value) ? valu
  * @description format value as number or zero
  */
 export const numberOrZero = (value?: Nullable<number>) => isNumber(value) ? value : 0;
-
-/**
- * @description encrypts a plain text string using AES-256-CBC encryption.
- */
-export function encryptAES(plainText: string): string {
-    const key = CryptoJS.enc.Base64.parse(env.VITE_AES_SECRET_KEY);
-    const iv = CryptoJS.enc.Utf8.parse('1234567890123456');
-
-    const encrypted = CryptoJS.AES.encrypt(plainText, key, {
-        iv,
-        mode: CryptoJS.mode.CBC,
-        padding: CryptoJS.pad.Pkcs7,
-    });
-
-    const encryptedBase64 = encrypted.ciphertext.toString(CryptoJS.enc.Base64);
-    return encodeURIComponent(encryptedBase64);
-}

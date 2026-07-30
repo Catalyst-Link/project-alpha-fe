@@ -130,7 +130,6 @@ declare global {
   const eagerComputed: typeof import('@vueuse/core').eagerComputed
   const effectScope: typeof import('vue').effectScope
   const email: typeof import('yup').email
-  const encryptAES: typeof import('./core/utils/HelperUtil').encryptAES
   const endOfDay: typeof import('date-fns').endOfDay
   const endOfDecade: typeof import('date-fns').endOfDecade
   const endOfHour: typeof import('date-fns').endOfHour
@@ -849,7 +848,6 @@ declare module 'vue' {
     readonly eachYearOfInterval: UnwrapRef<typeof import('date-fns')['eachYearOfInterval']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
-    readonly encryptAES: UnwrapRef<typeof import('./core/utils/HelperUtil')['encryptAES']>
     readonly endOfDay: UnwrapRef<typeof import('date-fns')['endOfDay']>
     readonly endOfDecade: UnwrapRef<typeof import('date-fns')['endOfDecade']>
     readonly endOfHour: UnwrapRef<typeof import('date-fns')['endOfHour']>
@@ -864,7 +862,6 @@ declare module 'vue' {
     readonly endOfWeek: UnwrapRef<typeof import('date-fns')['endOfWeek']>
     readonly endOfYear: UnwrapRef<typeof import('date-fns')['endOfYear']>
     readonly endOfYesterday: UnwrapRef<typeof import('date-fns')['endOfYesterday']>
-    readonly env: UnwrapRef<typeof import('./core/utils/EnvironmentUtil')['env']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly format: UnwrapRef<typeof import('date-fns')['format']>
     readonly formatDistance: UnwrapRef<typeof import('date-fns')['formatDistance']>
