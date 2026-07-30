@@ -92,6 +92,7 @@ declare global {
   const daysToWeeks: typeof import('date-fns').daysToWeeks
   const debouncedRef: typeof import('@vueuse/core').debouncedRef
   const debouncedWatch: typeof import('@vueuse/core').debouncedWatch
+  const decryptAES: typeof import('./core/utils/HelperUtil').decryptAES
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
   const definePage: typeof import('vue-router/experimental').definePage
@@ -127,6 +128,7 @@ declare global {
   const eachYearOfInterval: typeof import('date-fns').eachYearOfInterval
   const eagerComputed: typeof import('@vueuse/core').eagerComputed
   const effectScope: typeof import('vue').effectScope
+  const encryptAES: typeof import('./core/utils/HelperUtil').encryptAES
   const endOfDay: typeof import('date-fns').endOfDay
   const endOfDecade: typeof import('date-fns').endOfDecade
   const endOfHour: typeof import('date-fns').endOfHour
@@ -808,6 +810,7 @@ declare module 'vue' {
     readonly daysToWeeks: UnwrapRef<typeof import('date-fns')['daysToWeeks']>
     readonly debouncedRef: UnwrapRef<typeof import('@vueuse/core')['debouncedRef']>
     readonly debouncedWatch: UnwrapRef<typeof import('@vueuse/core')['debouncedWatch']>
+    readonly decryptAES: UnwrapRef<typeof import('./core/utils/HelperUtil')['decryptAES']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly definePage: UnwrapRef<typeof import('vue-router/experimental')['definePage']>
@@ -843,6 +846,7 @@ declare module 'vue' {
     readonly eachYearOfInterval: UnwrapRef<typeof import('date-fns')['eachYearOfInterval']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly encryptAES: UnwrapRef<typeof import('./core/utils/HelperUtil')['encryptAES']>
     readonly endOfDay: UnwrapRef<typeof import('date-fns')['endOfDay']>
     readonly endOfDecade: UnwrapRef<typeof import('date-fns')['endOfDecade']>
     readonly endOfHour: UnwrapRef<typeof import('date-fns')['endOfHour']>

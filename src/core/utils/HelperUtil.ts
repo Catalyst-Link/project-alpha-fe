@@ -1,3 +1,5 @@
+import CryptoJS from 'crypto-js';
+
 /**
  * @description check specific value is array
  */
@@ -72,3 +74,13 @@ export const numberOrNull = (value?: Nullable<number>) => isNumber(value) ? valu
  * @description format value as number or zero
  */
 export const numberOrZero = (value?: Nullable<number>) => isNumber(value) ? value : 0;
+
+/**
+ * @description encrypt a plain text string using AES encryption.
+ */
+export const encryptAES = (text: string): string => CryptoJS.AES.encrypt(text, env.VITE_AES_SECRET_KEY).toString();
+
+/**
+ * @description decrypt a cipher text string using AES decryption.
+ */
+export const decryptAES = (text: string): string => CryptoJS.AES.decrypt(text, env.VITE_AES_SECRET_KEY).toString(CryptoJS.enc.Utf8);
