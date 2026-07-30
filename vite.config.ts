@@ -143,6 +143,7 @@ export default defineConfig(({ mode }) => {
             ]),
         ],
 
+        envDir: `${process.cwd()}/environments`,
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
