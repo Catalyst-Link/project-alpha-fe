@@ -2,7 +2,7 @@
 definePage({
     name: 'catchAll',
     meta: {
-        layout: 'blank',
+        layout: 'Blank',
     },
 });
 
