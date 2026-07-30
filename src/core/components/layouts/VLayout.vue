@@ -10,7 +10,7 @@ watch(
     () => route.meta,
     (value) => {
         const { layout = 'Default' } = value as { layout?: string };
-        currentLayout.value = route.name !== 'catchAll' ? layout : 'Default';
+        currentLayout.value = layout;
     },
 );
 </script>

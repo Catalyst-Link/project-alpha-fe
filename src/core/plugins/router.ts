@@ -24,11 +24,15 @@ export function install(app: App<Element>) {
     router.beforeEach((to) => {
         window.scrollTo(0, 0);
 
-        if (to.matched.some(record => record.meta.requiresAuth)) {
-            handleAuthGuard();
+        if (to.matched.some(record => record.meta.requiresAuth === false)) {
+            const authStore = useAuthStore();
+
+            if (authStore.isAuthenticated) {
+                return { name: 'index' };
+            }
         }
-        else {
-            return true;
+        else if (to.matched.some(record => record.meta.requiresAuth)) {
+            handleAuthGuard();
         }
 
         NProgress.start();
