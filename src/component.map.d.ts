@@ -76,6 +76,7 @@ declare module 'vue' {
     VInputGroupTextarea: typeof import('./core/components/base/VInputGroup/VInputGroupTextarea.vue')['default']
     VLabel: typeof import('./core/components/base/VLabel/VLabel.vue')['default']
     VLayout: typeof import('./core/components/layouts/VLayout.vue')['default']
+    VLayoutAuth: typeof import('./core/components/layouts/VLayoutAuth.vue')['default']
     VLayoutBlank: typeof import('./core/components/layouts/VLayoutBlank.vue')['default']
     VLayoutDefault: typeof import('./core/components/layouts/VLayoutDefault.vue')['default']
     VOverlay: typeof import('./core/components/base/VOverlay/VOverlay.vue')['default']
