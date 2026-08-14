@@ -6,6 +6,10 @@ definePage({
     },
 });
 
+useHead({
+    title: 'Page Not Found',
+});
+
 const { t } = useI18n();
 </script>
 

@@ -11,6 +11,10 @@ definePage({
     },
 });
 
+useHead({
+    title: 'Sign In',
+});
+
 const { mutate, isPending } = useMutationLogin();
 const state = reactive(new LoginRequestDTO());
 const schema = computed(() => object({

@@ -6,6 +6,10 @@ definePage({
     },
 });
 
+useHead({
+    title: 'Dashboard',
+});
+
 const { t } = useI18n();
 const pageStore = usePageStore();
 pageStore.setTitle(t('message.start-creating-data'));
