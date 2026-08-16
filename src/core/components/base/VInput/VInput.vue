@@ -23,7 +23,7 @@ const {
 const phoneMask: FactoryOpts = {
     mask: [
         '+62 000-0000-0000',
-        '+62 0000-0000-0000',
+        '+62 000-0000-00000',
     ],
     dispatch: (appended: string, masked: MaskedDynamic) => {
         const digitCount = masked.unmaskedValue.length + appended.replace(/\D/g, '').length;
