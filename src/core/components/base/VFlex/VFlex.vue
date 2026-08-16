@@ -47,7 +47,7 @@ const FLEX_ITEMS: Record<FlexItems, string> = {
     stretch: 'items-stretch',
 };
 
-const GAP = {
+const GAP: Record<Gap, string> = {
     0: 'gap-0',
     0.5: 'gap-0.5',
     1: 'gap-1',
@@ -83,10 +83,10 @@ const GAP = {
     80: 'gap-80',
     96: 'gap-96',
     px: 'gap-px',
-} as const;
-type Gap = keyof typeof GAP;
+};
+type Gap = '0' | '0.5' | '1' | '1.5' | '2' | '2.5' | '3' | '3.5' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '14' | '16' | '20' | '24' | '28' | '32' | '36' | '40' | '44' | '48' | '52' | '56' | '60' | '64' | '72' | '80' | '96' | 'px';
 
-const GAP_X = {
+const GAP_X: Record<Gap, string> = {
     0: 'gap-x-0',
     0.5: 'gap-x-0.5',
     1: 'gap-x-1',
@@ -122,9 +122,9 @@ const GAP_X = {
     80: 'gap-x-80',
     96: 'gap-x-96',
     px: 'gap-x-px',
-} as const;
+};
 
-const GAP_Y = {
+const GAP_Y: Record<Gap, string> = {
     0: 'gap-y-0',
     0.5: 'gap-y-0.5',
     1: 'gap-y-1',
@@ -160,9 +160,9 @@ const GAP_Y = {
     80: 'gap-y-80',
     96: 'gap-y-96',
     px: 'gap-y-px',
-} as const;
+};
 
-const SPACE_X = {
+const SPACE_X: Record<Gap, string> = {
     0: 'space-x-0',
     0.5: 'space-x-0.5',
     1: 'space-x-1',
@@ -198,9 +198,9 @@ const SPACE_X = {
     80: 'space-x-80',
     96: 'space-x-96',
     px: 'space-x-px',
-} as const;
+};
 
-const SPACE_Y = {
+const SPACE_Y: Record<Gap, string> = {
     0: 'space-y-0',
     0.5: 'space-y-0.5',
     1: 'space-y-1',
@@ -236,7 +236,7 @@ const SPACE_Y = {
     80: 'space-y-80',
     96: 'space-y-96',
     px: 'space-y-px',
-} as const;
+};
 
 type Props = {
     class?: HTMLAttributes['class'];
