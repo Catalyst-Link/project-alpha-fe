@@ -375,6 +375,8 @@ common:
     reference: Reference
     reference-no: Reference No.
     regency: Regency
+    registration-error: Registration failed
+    registration-success: Account created
     remaining-auction: Remaining Auction
     remaining-auction-value: Remaining Auction Value
     remark: Remark
@@ -546,6 +548,8 @@ message:
         bhjb-changed: >-
             There is a change in BHJB at the time of fee submission and the BHJB that
             successfully handled it
+    registration-error: We couldn't create your account. Please try again.
+    registration-success: Your account has been created. Please sign in to continue.
     reject-confirmation: Reject Data Confirmation
     reject-message: >-
         Are you sure you want to reject this data? This action cannot be

@@ -15,6 +15,7 @@ declare global {
   const Endpoint: typeof import('./core/endpoints/Endpoint').Endpoint
   const FieldContextKey: typeof import('vee-validate').FieldContextKey
   const FormContextKey: typeof import('vee-validate').FormContextKey
+  const GENDER: typeof import('./modules/auth/constants/AuthConstant').GENDER
   const HttpResponseError: typeof import('./core/exceptions/HttpResponseError').HttpResponseError
   const HttpServiceImpl: typeof import('./core/services/impl/HttpServiceImpl').HttpServiceImpl
   const Inject: typeof import('tsyringe').inject
@@ -26,6 +27,7 @@ declare global {
   const QueryClient: typeof import('@tanstack/vue-query').QueryClient
   const QueryClientProvider: typeof import('@tanstack/vue-query').QueryClientProvider
   const RESPONSE: typeof import('./core/constants/CommonConstant').RESPONSE
+  const RegisterRequestDTO: typeof import('./modules/auth/models/dto/RegisterRequestDTO').RegisterRequestDTO
   const SIDEBAR_COOKIE_MAX_AGE: typeof import('./core/constants/CommonConstant').SIDEBAR_COOKIE_MAX_AGE
   const SIDEBAR_COOKIE_NAME: typeof import('./core/constants/CommonConstant').SIDEBAR_COOKIE_NAME
   const SIDEBAR_KEYBOARD_SHORTCUT: typeof import('./core/constants/CommonConstant').SIDEBAR_KEYBOARD_SHORTCUT
@@ -98,6 +100,7 @@ declare global {
   const definePage: typeof import('vue-router/experimental').definePage
   const defineRule: typeof import('vee-validate').defineRule
   const defineStore: typeof import('pinia').defineStore
+  const deserializePhoneNumber: typeof import('./core/utils/HelperUtil').deserializePhoneNumber
   const differenceInBusinessDays: typeof import('date-fns').differenceInBusinessDays
   const differenceInCalendarDays: typeof import('date-fns').differenceInCalendarDays
   const differenceInCalendarISOWeekYears: typeof import('date-fns').differenceInCalendarISOWeekYears
@@ -542,6 +545,7 @@ declare global {
   const useMutation: typeof import('@tanstack/vue-query').useMutation
   const useMutationLogin: typeof import('./modules/auth/composables/mutations/useMutationLogin').useMutationLogin
   const useMutationObserver: typeof import('@vueuse/core').useMutationObserver
+  const useMutationRegister: typeof import('./modules/auth/composables/mutations/useMutationRegister').useMutationRegister
   const useNavigatorLanguage: typeof import('@vueuse/core').useNavigatorLanguage
   const useNetwork: typeof import('@vueuse/core').useNetwork
   const useNow: typeof import('@vueuse/core').useNow
@@ -712,11 +716,17 @@ declare global {
   export type { LoginResponseDTO } from './modules/auth/models/dto/LoginResponseDTO'
   import('./modules/auth/models/dto/LoginResponseDTO')
   // @ts-ignore
+  export type { RegisterRequestDTO } from './modules/auth/models/dto/RegisterRequestDTO'
+  import('./modules/auth/models/dto/RegisterRequestDTO')
+  // @ts-ignore
   export type { AuthService } from './modules/auth/services/AuthService'
   import('./modules/auth/services/AuthService')
   // @ts-ignore
   export type { AuthServiceImpl } from './modules/auth/services/impl/AuthServiceImpl'
   import('./modules/auth/services/impl/AuthServiceImpl')
+  // @ts-ignore
+  export type { Gender } from './modules/auth/types/AuthType'
+  import('./modules/auth/types/AuthType')
 }
 
 // for vue template auto import
@@ -734,6 +744,7 @@ declare module 'vue' {
     readonly Endpoint: UnwrapRef<typeof import('./core/endpoints/Endpoint')['Endpoint']>
     readonly FieldContextKey: UnwrapRef<typeof import('vee-validate')['FieldContextKey']>
     readonly FormContextKey: UnwrapRef<typeof import('vee-validate')['FormContextKey']>
+    readonly GENDER: UnwrapRef<typeof import('./modules/auth/constants/AuthConstant')['GENDER']>
     readonly HttpResponseError: UnwrapRef<typeof import('./core/exceptions/HttpResponseError')['HttpResponseError']>
     readonly HttpServiceImpl: UnwrapRef<typeof import('./core/services/impl/HttpServiceImpl')['HttpServiceImpl']>
     readonly Inject: UnwrapRef<typeof import('tsyringe')['inject']>
@@ -745,6 +756,7 @@ declare module 'vue' {
     readonly QueryClient: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClient']>
     readonly QueryClientProvider: UnwrapRef<typeof import('@tanstack/vue-query')['QueryClientProvider']>
     readonly RESPONSE: UnwrapRef<typeof import('./core/constants/CommonConstant')['RESPONSE']>
+    readonly RegisterRequestDTO: UnwrapRef<typeof import('./modules/auth/models/dto/RegisterRequestDTO')['RegisterRequestDTO']>
     readonly SIDEBAR_COOKIE_MAX_AGE: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_COOKIE_MAX_AGE']>
     readonly SIDEBAR_COOKIE_NAME: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_COOKIE_NAME']>
     readonly SIDEBAR_KEYBOARD_SHORTCUT: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_KEYBOARD_SHORTCUT']>
@@ -817,6 +829,7 @@ declare module 'vue' {
     readonly definePage: UnwrapRef<typeof import('vue-router/experimental')['definePage']>
     readonly defineRule: UnwrapRef<typeof import('vee-validate')['defineRule']>
     readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
+    readonly deserializePhoneNumber: UnwrapRef<typeof import('./core/utils/HelperUtil')['deserializePhoneNumber']>
     readonly differenceInBusinessDays: UnwrapRef<typeof import('date-fns')['differenceInBusinessDays']>
     readonly differenceInCalendarDays: UnwrapRef<typeof import('date-fns')['differenceInCalendarDays']>
     readonly differenceInCalendarISOWeekYears: UnwrapRef<typeof import('date-fns')['differenceInCalendarISOWeekYears']>
@@ -1261,6 +1274,7 @@ declare module 'vue' {
     readonly useMutation: UnwrapRef<typeof import('@tanstack/vue-query')['useMutation']>
     readonly useMutationLogin: UnwrapRef<typeof import('./modules/auth/composables/mutations/useMutationLogin')['useMutationLogin']>
     readonly useMutationObserver: UnwrapRef<typeof import('@vueuse/core')['useMutationObserver']>
+    readonly useMutationRegister: UnwrapRef<typeof import('./modules/auth/composables/mutations/useMutationRegister')['useMutationRegister']>
     readonly useNavigatorLanguage: UnwrapRef<typeof import('@vueuse/core')['useNavigatorLanguage']>
     readonly useNetwork: UnwrapRef<typeof import('@vueuse/core')['useNetwork']>
     readonly useNow: UnwrapRef<typeof import('@vueuse/core')['useNow']>

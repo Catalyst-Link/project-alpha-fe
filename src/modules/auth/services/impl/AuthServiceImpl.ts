@@ -11,4 +11,14 @@ export class AuthServiceImpl implements AuthService {
             },
         });
     }
+
+    register(data: RegisterRequestDTO): Promise<void> {
+        return this.httpService.post<void, RegisterRequestDTO>({
+            url: Endpoint.extractPath(AuthEndpoint.REGISTER),
+            data,
+            config: {
+                _authorization: false,
+            },
+        });
+    }
 }
