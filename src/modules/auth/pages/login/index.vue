@@ -65,10 +65,10 @@ const handleFormSubmit = handleSubmit(() =>
             size="full"
             class="h-12"
         >
-            <span>Sign in</span>
-            <span>
+            Sign In
+            <template #icon>
                 <IconLucideLogIn />
-            </span>
+            </template>
         </VButton>
     </form>
 </template>
