@@ -84,3 +84,10 @@ export const encryptAES = (text: string): string => CryptoJS.AES.encrypt(text, e
  * @description decrypt a cipher text string using AES decryption.
  */
 export const decryptAES = (text: string): string => CryptoJS.AES.decrypt(text, env.VITE_AES_SECRET_KEY).toString(CryptoJS.enc.Utf8);
+
+/**
+ * @description deserialize masked phone number
+ */
+export const deserializePhoneNumber = (text: string) => text
+    .replace(/^\+62/, '')
+    .replace(/\D/g, '');
