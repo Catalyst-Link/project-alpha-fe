@@ -34,11 +34,7 @@ const buttonClass = computed(() => cn(
         :type="type"
     >
         <VSpinner v-if="isLoading" />
-        <span>
-            <slot />
-        </span>
-        <span>
-            <slot name="icon" />
-        </span>
+        <slot />
+        <slot name="icon" />
     </Primitive>
 </template>
