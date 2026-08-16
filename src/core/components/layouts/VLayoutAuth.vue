@@ -77,7 +77,7 @@ const text = computed(() => (route.meta as {
             </div>
         </div>
 
-        <div class="basis-1/2 min-h-dvh flex flex-col justify-center px-8 xl:px-32 space-y-10">
+        <div class="basis-1/2 min-h-dvh flex flex-col justify-center px-8 xl:px-20 space-y-10">
             <img
                 src="/images/hris_logo.png"
                 class="w-52 mx-auto"
