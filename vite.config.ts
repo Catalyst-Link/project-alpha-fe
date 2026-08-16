@@ -75,7 +75,7 @@ export default defineConfig(({ mode }) => {
                         'clsx': ['clsx'],
                         'tailwind-merge': ['twMerge'],
                         'class-variance-authority': ['cva'],
-                        'tsyringe': [['injectable', 'Injectable'], ['inject', 'Inject'], ['singleton', 'Singleton']],
+                        '@core/di/tsyringe': [['injectable', 'Injectable'], ['inject', 'Inject'], ['singleton', 'Singleton']],
                     },
                 ],
                 dirs: [

@@ -1,4 +1,4 @@
-import { container, Lifecycle } from 'tsyringe';
+import { container, Lifecycle } from '@/core/di/tsyringe';
 
 container
     .register(

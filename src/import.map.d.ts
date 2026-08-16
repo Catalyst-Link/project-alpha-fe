@@ -18,8 +18,8 @@ declare global {
   const GENDER: typeof import('./modules/auth/constants/AuthConstant').GENDER
   const HttpResponseError: typeof import('./core/exceptions/HttpResponseError').HttpResponseError
   const HttpServiceImpl: typeof import('./core/services/impl/HttpServiceImpl').HttpServiceImpl
-  const Inject: typeof import('tsyringe').inject
-  const Injectable: typeof import('tsyringe').injectable
+  const Inject: typeof import('@core/di/tsyringe').inject
+  const Injectable: typeof import('@core/di/tsyringe').injectable
   const LoginRequestDTO: typeof import('./modules/auth/models/dto/LoginRequestDTO').LoginRequestDTO
   const LoginResponseDTO: typeof import('./modules/auth/models/dto/LoginResponseDTO').LoginResponseDTO
   const MESSAGE: typeof import('./core/constants/CommonConstant').MESSAGE
@@ -35,7 +35,7 @@ declare global {
   const SIDEBAR_WIDTH_ICON: typeof import('./core/constants/CommonConstant').SIDEBAR_WIDTH_ICON
   const SIDEBAR_WIDTH_MOBILE: typeof import('./core/constants/CommonConstant').SIDEBAR_WIDTH_MOBILE
   const SORT_DIRECTION: typeof import('./core/constants/CommonConstant').SORT_DIRECTION
-  const Singleton: typeof import('tsyringe').singleton
+  const Singleton: typeof import('@core/di/tsyringe').singleton
   const TabBuilder: typeof import('./core/builders/TabBuilder').TabBuilder
   const TableColumnBuilder: typeof import('./core/builders/TableColumnBuilder').TableColumnBuilder
   const acceptHMRUpdate: typeof import('pinia').acceptHMRUpdate
@@ -747,8 +747,8 @@ declare module 'vue' {
     readonly GENDER: UnwrapRef<typeof import('./modules/auth/constants/AuthConstant')['GENDER']>
     readonly HttpResponseError: UnwrapRef<typeof import('./core/exceptions/HttpResponseError')['HttpResponseError']>
     readonly HttpServiceImpl: UnwrapRef<typeof import('./core/services/impl/HttpServiceImpl')['HttpServiceImpl']>
-    readonly Inject: UnwrapRef<typeof import('tsyringe')['inject']>
-    readonly Injectable: UnwrapRef<typeof import('tsyringe')['injectable']>
+    readonly Inject: UnwrapRef<typeof import('@core/di/tsyringe')['inject']>
+    readonly Injectable: UnwrapRef<typeof import('@core/di/tsyringe')['injectable']>
     readonly LoginRequestDTO: UnwrapRef<typeof import('./modules/auth/models/dto/LoginRequestDTO')['LoginRequestDTO']>
     readonly LoginResponseDTO: UnwrapRef<typeof import('./modules/auth/models/dto/LoginResponseDTO')['LoginResponseDTO']>
     readonly MESSAGE: UnwrapRef<typeof import('./core/constants/CommonConstant')['MESSAGE']>
@@ -764,7 +764,7 @@ declare module 'vue' {
     readonly SIDEBAR_WIDTH_ICON: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_WIDTH_ICON']>
     readonly SIDEBAR_WIDTH_MOBILE: UnwrapRef<typeof import('./core/constants/CommonConstant')['SIDEBAR_WIDTH_MOBILE']>
     readonly SORT_DIRECTION: UnwrapRef<typeof import('./core/constants/CommonConstant')['SORT_DIRECTION']>
-    readonly Singleton: UnwrapRef<typeof import('tsyringe')['singleton']>
+    readonly Singleton: UnwrapRef<typeof import('@core/di/tsyringe')['singleton']>
     readonly TabBuilder: UnwrapRef<typeof import('./core/builders/TabBuilder')['TabBuilder']>
     readonly TableColumnBuilder: UnwrapRef<typeof import('./core/builders/TableColumnBuilder')['TableColumnBuilder']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
