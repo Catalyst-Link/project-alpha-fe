@@ -13,7 +13,7 @@ const text = computed(() => (route.meta as {
 </script>
 
 <template>
-    <section class="flex flex-col lg:flex-row min-h-dvh">
+    <section class="flex flex-col min-h-dvh lg:h-dvh lg:overflow-hidden lg:flex-row">
         <div class="basis-1/2 hidden lg:flex relative items-center bg-[url(/images/auth_banner.webp)] bg-position-[75%_50%] bg-no-repeat bg-cover rounded-r-[7%]">
             <VOverlay class="rounded-r-[7%]" />
             <div class="z-10 space-y-8 w-full px-20">
@@ -77,31 +77,33 @@ const text = computed(() => (route.meta as {
             </div>
         </div>
 
-        <div class="basis-1/2 min-h-dvh flex flex-col justify-center px-8 xl:px-20 space-y-10">
-            <img
-                src="/images/hris_logo.png"
-                class="w-52 mx-auto"
-            >
-
-            <div class="space-y-4">
-                <VText
-                    as="h4"
-                    variant="h4"
-                    class="font-semibold"
+        <div class="basis-1/2 flex flex-col px-8 pt-6 pb-24 md:pt-8 md:pb-8 xl:px-20 lg:overflow-y-auto">
+            <div class="m-auto w-full space-y-10">
+                <img
+                    src="/images/hris_logo.png"
+                    class="w-52 mx-auto"
                 >
-                    {{ text?.heading }}
-                </VText>
 
-                <VText
-                    as="p"
-                    variant="body"
-                    class="font-extralight"
-                >
-                    {{ text?.subheading }}
-                </VText>
+                <div class="space-y-4">
+                    <VText
+                        as="h4"
+                        variant="h4"
+                        class="font-semibold"
+                    >
+                        {{ text?.heading }}
+                    </VText>
+
+                    <VText
+                        as="p"
+                        variant="body"
+                        class="font-extralight"
+                    >
+                        {{ text?.subheading }}
+                    </VText>
+                </div>
+
+                <slot />
             </div>
-
-            <slot />
         </div>
     </section>
 </template>
