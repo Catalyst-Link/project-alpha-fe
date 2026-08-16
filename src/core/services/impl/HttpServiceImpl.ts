@@ -158,13 +158,15 @@ export class HttpServiceImpl implements HttpService {
         const config = error.config as ExtendedInternalAxiosRequestConfig;
 
         if (error.response?.status === 401) {
-            toast.error(
-                'Session Timeout',
-                {
-                    description: 'Your session has expired for security reasons. Please log back in to access the application.',
-                },
-            );
-            useAuthStore().logout();
+            if (window.location.pathname !== '/login') {
+                toast.error(
+                    'Session Timeout',
+                    {
+                        description: 'Your session has expired for security reasons. Please log back in to access the application.',
+                    },
+                );
+                useAuthStore().logout();
+            }
         }
 
         else {
