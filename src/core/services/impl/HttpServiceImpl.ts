@@ -84,7 +84,7 @@ export class HttpServiceImpl implements HttpService {
     }
 
     private _withAuthorization(config: ExtendedInternalAxiosRequestConfig): ExtendedInternalAxiosRequestConfig['_authorization'] {
-        return config._authorization ?? 'snake';
+        return config._authorization ?? true;
     }
 
     private _withNotification(config: ExtendedInternalAxiosRequestConfig): boolean {
@@ -111,11 +111,7 @@ export class HttpServiceImpl implements HttpService {
     ): ExtendedInternalAxiosRequestConfig {
         NProgress.start();
         if (context._withAuthorization(request) && useAuthStore().token) {
-            request.params = {
-                ...request.params,
-                access_token: context._withAuthorization(request) === 'snake' ? useAuthStore().token : undefined,
-                accessToken: context._withAuthorization(request) === 'camel' ? useAuthStore().token : undefined,
-            };
+            request.headers.set('Authorization', `Bearer ${useAuthStore().token}`);
         }
 
         if (request.data && typeof request.data === 'object' && !(request.data instanceof FormData)) {

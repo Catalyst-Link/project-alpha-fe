@@ -2,7 +2,7 @@ import type { AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } fr
 
 export type ExtendedAxiosRequestConfig<D = any> = {
     _asAxiosResponse?: boolean;
-    _authorization?: 'camel' | 'snake' | false;
+    _authorization?: boolean;
     _notification?: boolean;
     _handler?: boolean;
     _retry?: boolean;
@@ -11,7 +11,7 @@ export type ExtendedAxiosRequestConfig<D = any> = {
 
 export type ExtendedInternalAxiosRequestConfig<D = any> = {
     _asAxiosResponse?: boolean;
-    _authorization?: 'camel' | 'snake' | false;
+    _authorization?: boolean;
     _notification?: boolean;
     _handler?: boolean;
     _retry?: boolean;
